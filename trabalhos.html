@@ -1,0 +1,854 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Portfólio de trabalhos do Garisign: identidades visuais, social media, menus, vídeos promocionais, web design e design gráfico para marcas reais.">
+<meta name="keywords" content="designer criativo, portfolio, motion design, social media, Felgueiras, Portugal, freelancer, Garisign">
+<meta name="author" content="Gabriel, Garisign Designer">
+<meta name="robots" content="index, follow">
+<meta property="og:title" content="Garisign Designer: Trabalhos">
+<meta property="og:description" content="Portfólio de trabalhos do Garisign: identidades visuais, social media, menus, vídeos promocionais, web design e design gráfico para marcas reais.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://garisign.pt/trabalhos.html">
+<meta property="og:image" content="assets__img__logotipo__og-image.svg">
+<meta property="og:locale" content="pt_PT">
+<meta property="og:site_name" content="Garisign Designer">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Garisign Designer: Trabalhos">
+<meta name="twitter:description" content="Portfólio de trabalhos do Garisign: identidades visuais, social media, menus, vídeos promocionais e web design.">
+<meta name="twitter:image" content="assets__img__logotipo__og-image.svg">
+<link rel="canonical" href="https://garisign.pt/trabalhos.html">
+<link rel="icon" type="image/svg+xml" href="assets__img__logotipo__LOGO.svg">
+<link rel="apple-touch-icon" href="assets__img__logotipo__LOGO.svg">
+<link rel="manifest" href="site.webmanifest">
+<title>Trabalhos: Garisign Designer</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload" href="fonts__Agdasima-Regular.ttf" as="font" type="font/ttf" crossorigin>
+<link rel="preload" href="fonts__Comfortaa-Light.ttf" as="font" type="font/ttf" crossorigin>
+<link rel="preload" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital@1&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital@1&display=swap"></noscript>
+<link rel="stylesheet" href="css__styles.css">
+<style>
+/* ------ LIGHTBOX ------ */
+#lightbox {
+  display: none;
+  position: fixed; inset: 0; z-index: 9999;
+  background: rgba(10,10,10,0.96);
+  backdrop-filter: blur(12px);
+  align-items: center; justify-content: center;
+  flex-direction: column;
+}
+#lightbox.lb-open { display: flex; }
+
+#lb-img-wrap {
+  position: relative;
+  max-width: min(90vw, 1100px);
+  max-height: 82vh;
+  display: flex; align-items: center; justify-content: center;
+}
+#lb-img {
+  max-width: 100%; max-height: 82vh;
+  border-radius: 10px;
+  object-fit: contain;
+  opacity: 0;
+  transition: opacity 0.3s;
+  box-shadow: 0 32px 96px rgba(0,0,0,0.7), 0 0 0 1px rgba(221,181,108,0.12);
+  display: block;
+}
+
+#lb-close {
+  position: fixed; top: 20px; right: 24px;
+  background: none; border: none;
+  color: rgba(240,237,232,0.65); font-size: 38px; line-height: 1;
+  cursor: pointer; z-index: 10000; padding: 4px 10px;
+  transition: color 0.2s, transform 0.2s;
+}
+#lb-close:hover { color: var(--gold); transform: scale(1.15); }
+
+#lb-prev, #lb-next {
+  position: fixed; top: 50%; transform: translateY(-50%);
+  background: rgba(34,34,34,0.55); border: 1px solid rgba(221,181,108,0.18);
+  color: var(--cream); font-size: 22px;
+  width: 48px; height: 48px; border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  cursor: pointer; z-index: 10000;
+  transition: background 0.2s, border-color 0.2s, transform 0.2s;
+}
+#lb-prev { left: 16px; }
+#lb-next { right: 16px; }
+#lb-prev:hover, #lb-next:hover {
+  background: rgba(221,181,108,0.15);
+  border-color: rgba(221,181,108,0.45);
+  transform: translateY(-50%) scale(1.08);
+}
+
+#lb-count {
+  position: fixed; bottom: 20px;
+  font-family: 'Comfortaa', sans-serif; font-size: 12px;
+  letter-spacing: 2px; color: rgba(240,237,232,0.38);
+}
+
+@media (max-width: 600px) {
+  #lb-prev { left: 8px; }
+  #lb-next { right: 8px; }
+  #lb-prev, #lb-next { width: 40px; height: 40px; font-size: 18px; }
+  #lb-img-wrap { max-width: 96vw; }
+}
+
+/* ------ PASSION FEATURED ------ */
+:root {
+  --passion-red: #c0392b;
+  --passion-warm: #d4670c;
+  --passion-dim: rgba(212,103,12,0.12);
+  --passion-border: rgba(212,103,12,0.28);
+  --tf24-gold: #c4a96a;
+  --tf24-dim: rgba(196,169,106,0.12);
+  --tf24-border: rgba(196,169,106,0.28);
+  --pm-green: #5b9e72;
+  --pm-dim: rgba(91,158,114,0.12);
+  --pm-border: rgba(91,158,114,0.28);
+  --bm-blue: #2563eb;
+  --bm-dim: rgba(37,99,235,0.10);
+  --bm-border: rgba(37,99,235,0.25);
+}
+
+/* ------ FEATURED BADGE VARIANTES ------ */
+.featured-badge--passion { background: var(--passion-dim); border-color: var(--passion-border); color: var(--passion-warm); }
+.featured-badge--tf24   { background: var(--tf24-dim);   border-color: var(--tf24-border);   color: var(--tf24-gold); }
+.featured-badge--pm     { background: var(--pm-dim);     border-color: var(--pm-border);     color: var(--pm-green); }
+.featured-badge--bm     { background: var(--bm-dim);     border-color: var(--bm-border);     color: var(--bm-blue); }
+
+.featured-project__sub--passion { color: var(--passion-warm); }
+.featured-project__sub--tf24    { color: var(--tf24-gold); }
+.featured-project__sub--pm      { color: var(--pm-green); }
+.featured-project__sub--bm      { color: var(--bm-blue); }
+
+.featured-project__video {
+  width: 100%;
+  border-radius: 18px;
+  overflow: hidden;
+  border: 1px solid rgba(141,198,63,0.28);
+  background: rgba(0,0,0,0.34);
+  box-shadow: 0 16px 64px rgba(141,198,63,0.12);
+}
+.featured-project__video .yt-facade {
+  aspect-ratio: 16 / 9;
+  background: #111;
+}
+
+.btn-passion {
+  background: var(--passion-warm); color: #fff;
+  box-shadow: 0 4px 28px rgba(212,103,12,0.22);
+}
+.btn-passion:hover {
+  background: #e07a18; transform: translateY(-2px);
+  box-shadow: 0 8px 44px rgba(212,103,12,0.36);
+}
+.btn-tf24 {
+  background: var(--tf24-gold); color: #1a1410;
+  box-shadow: 0 4px 28px rgba(196,169,106,0.22);
+}
+.btn-tf24:hover {
+  background: #d4bc7c; transform: translateY(-2px);
+  box-shadow: 0 8px 44px rgba(196,169,106,0.36);
+}
+.btn-pm {
+  background: var(--pm-green); color: #fff;
+  box-shadow: 0 4px 28px rgba(91,158,114,0.22);
+}
+.btn-pm:hover {
+  background: #6db585; transform: translateY(-2px);
+  box-shadow: 0 8px 44px rgba(91,158,114,0.36);
+}
+.btn-bm {
+  background: var(--bm-blue); color: #fff;
+  box-shadow: 0 4px 28px rgba(37,99,235,0.22);
+}
+.btn-bm:hover {
+  background: #3b82f6; transform: translateY(-2px);
+  box-shadow: 0 8px 44px rgba(37,99,235,0.36);
+}
+
+/* ------ Bola Murcha: imagens com aspect ratios próprios ------ */
+.featured-project__images--bm {
+  grid-template-columns: 1.1fr 0.9fr;
+}
+.featured-project__images--bm > img:first-child {
+  aspect-ratio: 16/10 !important;
+}
+.featured-project__images--bm .featured-col img:first-child {
+  aspect-ratio: 16/10 !important;
+}
+.featured-project__images--bm .featured-col img:last-child {
+  aspect-ratio: 4/5 !important;
+}
+@media (max-width: 860px) {
+  .featured-project__images--bm { grid-template-columns: repeat(3, 1fr); }
+  .featured-project__images--bm > img:first-child { aspect-ratio: 16/10 !important; }
+  .featured-project__images--bm .featured-col { flex-direction: row; }
+  .featured-project__images--bm .featured-col img { flex: 1; }
+  .featured-project__images--bm .featured-col img:first-child { aspect-ratio: 16/10 !important; }
+  .featured-project__images--bm .featured-col img:last-child { aspect-ratio: 4/5 !important; }
+}
+@media (max-width: 600px) {
+  .featured-project__images--bm {
+    grid-template-columns: 1fr;
+  }
+  .featured-project__images--bm .featured-col {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+  .featured-project__images--bm .featured-col img {
+    width: 100%;
+    min-width: 0;
+  }
+}
+
+/* ------ VIDEO PREVIEW GRID (para secção Passion / 24) ------ */
+.featured-project__images--video {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr;
+  gap: 10px;
+  align-items: start;
+}
+.featured-project__images--video video {
+  width: 100%; border-radius: 14px; display: block;
+  object-fit: cover; background: #111;
+}
+.featured-project__images--video .featured-col-v {
+  display: flex; flex-direction: column; gap: 10px;
+}
+.featured-project__images--video .featured-col-v video {
+  aspect-ratio: 9/16;
+}
+@media (max-width: 600px) {
+  .featured-project__images--video { grid-template-columns: 1fr; }
+  .featured-project__images--video .featured-col-v { flex-direction: row; }
+  .featured-project__images--video .featured-col-v video { flex: 1; }
+}
+
+/* ------ WEBSITE PLACEHOLDER (24 Barbearia) ------ */
+.site-preview-wrap {
+  position: relative; border-radius: 18px; overflow: hidden;
+  border: 1px solid var(--tf24-border);
+  box-shadow: 0 16px 64px rgba(196,169,106,0.10);
+}
+.site-preview-bar {
+  background: #1a1410; padding: 10px 14px;
+  display: flex; align-items: center; gap: 8px;
+}
+.site-preview-bar__dots { display: flex; gap: 5px; }
+.site-preview-bar__dot {
+  width: 9px; height: 9px; border-radius: 50%;
+}
+.site-preview-bar__dot:nth-child(1) { background: #ff5f57; }
+.site-preview-bar__dot:nth-child(2) { background: #ffbd2e; }
+.site-preview-bar__dot:nth-child(3) { background: #28c840; }
+.site-preview-bar__url {
+  flex: 1; text-align: center;
+  font-size: 11px; letter-spacing: 1.5px; color: rgba(240,237,232,0.28);
+  font-family: 'Comfortaa', sans-serif;
+}
+.site-preview-bar__badge {
+  font-size: 9px; letter-spacing: 2px; text-transform: uppercase;
+  color: var(--tf24-gold); background: var(--tf24-dim);
+  padding: 2px 8px; border-radius: 20px;
+  border: 1px solid var(--tf24-border);
+}
+.site-preview-screen {
+  position: relative; aspect-ratio: 16/9; overflow: hidden;
+}
+.site-preview-screen img {
+  width: 100%; height: 100%; object-fit: cover;
+  filter: brightness(0.55);
+}
+.site-preview-overlay {
+  position: absolute; inset: 0;
+  display: flex; flex-direction: column;
+  align-items: center; justify-content: center;
+  gap: 12px; text-align: center; padding: 24px;
+  background: linear-gradient(135deg, rgba(26,20,16,0.65) 0%, rgba(26,20,16,0.4) 100%);
+}
+.site-preview-overlay__logo {
+  width: 72px; height: 72px;
+  filter: brightness(0) saturate(100%) invert(73%) sepia(30%) saturate(600%) hue-rotate(5deg) brightness(110%);
+  opacity: 0.9;
+}
+.site-preview-overlay__title {
+  font-family: 'Agdasima', sans-serif;
+  font-size: clamp(24px, 4vw, 38px); letter-spacing: 4px;
+  color: var(--cream); margin: 0;
+}
+.site-preview-overlay__tag {
+  font-size: 10px; letter-spacing: 2.5px; text-transform: uppercase;
+  color: var(--tf24-gold);
+  background: var(--tf24-dim); border: 1px solid var(--tf24-border);
+  padding: 4px 14px; border-radius: 20px;
+}
+.site-preview-overlay__sub {
+  font-size: 12px; color: rgba(240,237,232,0.42);
+  font-family: 'Comfortaa', sans-serif; letter-spacing: 0.5px;
+}
+
+/* ------ SMALL FEATURE CARDS (Paula + Bola Murcha) ------ */
+.client-feature {
+  padding: clamp(60px,8vw,100px) clamp(20px,5vw,80px);
+  border-top: 1px solid rgba(240,237,232,0.06);
+  position: relative; z-index: 2;
+}
+.client-feature__inner {
+  max-width: 1200px; margin: 0 auto;
+  display: grid; grid-template-columns: 1fr 1fr; gap: clamp(32px,5vw,72px);
+  align-items: center;
+}
+.client-feature__inner--reverse { direction: rtl; }
+.client-feature__inner--reverse > * { direction: ltr; }
+.client-feature__meta {}
+.client-feature__badge {
+  display: inline-flex; align-items: center; gap: 8px;
+  padding: 5px 14px; border-radius: 40px;
+  font-size: 10px; letter-spacing: 2px; text-transform: uppercase;
+  margin-bottom: 18px;
+}
+.client-feature__badge::before {
+  content: ''; width: 5px; height: 5px; border-radius: 50%; flex-shrink: 0;
+  animation: pulse-dot 2.4s ease-in-out infinite;
+}
+.client-feature__title {
+  font-family: 'Agdasima', sans-serif;
+  font-size: clamp(36px,5vw,64px); letter-spacing: 2px;
+  color: var(--cream); line-height: 0.9; margin-bottom: 10px;
+}
+.client-feature__sub {
+  font-size: 12px; letter-spacing: 1px; text-transform: uppercase;
+  color: rgba(240,237,232,0.38); margin-bottom: 18px;
+}
+.client-feature__desc {
+  font-size: 15px; color: rgba(240,237,232,0.58);
+  line-height: 1.75; margin-bottom: 28px;
+}
+.client-feature__visual {}
+.client-feature__imgs {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 10px;
+}
+.client-feature__imgs img {
+  width: 100%; border-radius: 14px; display: block;
+  object-fit: cover; aspect-ratio: 4/5;
+  transition: transform 0.5s var(--transition);
+}
+.client-feature__imgs img:hover { transform: scale(1.03); }
+.client-feature__imgs img:first-child:last-child {
+  grid-column: 1 / -1; aspect-ratio: 16/9;
+}
+.client-feature__logo-wrap {
+  display: flex; align-items: center; justify-content: center;
+  background: rgba(240,237,232,0.03);
+  border-radius: 18px; padding: clamp(24px,4vw,48px);
+  border: 1px solid rgba(240,237,232,0.07);
+}
+.client-feature__logo-wrap img {
+  max-width: 200px; max-height: 120px;
+  object-fit: contain; display: block; margin: 0 auto;
+}
+@media (max-width: 768px) {
+  .client-feature__inner { grid-template-columns: 1fr; }
+  .client-feature__inner--reverse { direction: ltr; }
+}
+
+</style>
+</head>
+<body id="top">
+
+<div id="scroll-progress"></div>
+<div id="cursor"></div>
+<div id="cursor-ring"></div>
+<canvas id="bg-canvas"></canvas>
+<div class="noise"></div>
+
+<nav id="navbar">
+  <a href="index.html" class="nav-logo" data-hover>
+    <div class="nav-logo-mark"><img src="assets__img__logotipo__LOGO.svg" alt="Logótipo Garisign" width="32" height="32"></div>
+    <span class="nav-logo-text">Garisign</span>
+  </a>
+  <ul class="nav-links">
+    <li><a href="index.html" data-nav data-i18n="nav.home">Início</a></li>
+    <li><a href="#top" data-nav class="active" data-i18n="nav.works">Trabalhos</a></li>
+    <li><a href="index.html#services" data-nav data-i18n="nav.services">Serviços</a></li>
+    <li><a href="index.html#about" data-nav data-i18n="nav.about">Sobre</a></li>
+    <li><a href="contacto.html" data-nav data-i18n="nav.contact">Contacto</a></li>
+  </ul>
+  <div class="nav-right">
+    <div class="lang-toggle">
+      <button type="button" class="lang-btn active" data-lang="pt" id="btn-pt">PT</button>
+      <button type="button" class="lang-btn" data-lang="en" id="btn-en">EN</button>
+    </div>
+    <button type="button" id="nav-toggle" class="nav-toggle" aria-label="Menu" onclick="toggleMenu()">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<div id="mobile-menu" class="mobile-menu" aria-hidden="true">
+  <ul>
+    <li><a href="index.html" onclick="toggleMenu()" data-i18n="nav.home">Início</a></li>
+    <li><a href="#top" onclick="toggleMenu()" data-i18n="nav.works">Trabalhos</a></li>
+    <li><a href="index.html#services" onclick="toggleMenu()" data-i18n="nav.services">Serviços</a></li>
+    <li><a href="index.html#about" onclick="toggleMenu()" data-i18n="nav.about">Sobre</a></li>
+    <li><a href="contacto.html" onclick="toggleMenu()" data-i18n="nav.contact">Contacto</a></li>
+  </ul>
+</div>
+
+<div class="social-float">
+  <a href="https://tiktok.com/@garisign_designer" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="TikTok" data-hover>
+    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1V9.01a6.33 6.33 0 00-.79-.05 6.34 6.34 0 00-6.34 6.34 6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.33-6.34V8.69a8.18 8.18 0 004.77 1.52V6.79a4.85 4.85 0 01-1-.1z"/></svg>
+  </a>
+  <a href="https://instagram.com/garisign.designer" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="Instagram" data-hover>
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
+  </a>
+</div>
+
+<main class="page-main">
+  <header class="page-hero reveal">
+    <p class="section-label" data-i18n="worksPage.label">Portfólio</p>
+    <h1 data-i18n="worksPage.title">Trabalhos</h1>
+    <p class="page-lead" data-i18n="worksPage.lead">Projetos reais para clientes reais: identidades visuais, social media, vídeos promocionais, menus e web design com impacto.</p>
+  </header>
+
+  <!-- ==================== RECONGE: PROJETO DE DESTAQUE ==================== -->
+  <section id="reconge" class="featured-project reveal">
+    <div class="featured-project__inner">
+      <div class="featured-project__meta">
+        <span class="featured-badge" data-i18n="worksPage.reconge.badge">PAP 2026, Escola Profissional de Felgueiras</span>
+        <h2 class="featured-project__title">RECONGE</h2>
+        <p class="featured-project__sub" data-i18n="worksPage.reconge.sub">Identidade Visual · Branding · Social Media · Vídeo Promocional</p>
+        <p class="featured-project__desc" data-i18n="worksPage.reconge.desc">A minha Prova de Aptidão Profissional, o projeto mais completo que já realizei. Criei a identidade visual integral, manual de normas gráficas, conteúdos para redes sociais e vídeo promocional para uma plataforma social que une jovens em busca de alojamento com idosos que precisam de companhia.</p>
+        <a href="reconge.html" class="btn-primary btn-reconge" data-hover data-i18n="worksPage.reconge.cta">Ver Case Study →</a>
+      </div>
+      <div class="featured-project__visual">
+        <div class="featured-project__images">
+          <img src="projetos__reconge__img__post-1.webp" alt="RECONGE: Unir gerações, Partilhar vidas" loading="lazy">
+          <div class="featured-col">
+            <img src="projetos__reconge__img__Prancheta-1-1.webp" alt="RECONGE: Para o idoso" loading="lazy">
+            <img src="projetos__reconge__img__Prancheta-1-2.webp" alt="RECONGE: Para o jovem" loading="lazy">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== CRDESIGN WEBSITE ==================== -->
+  <section id="crdesign" class="featured-project reveal">
+    <div class="featured-project__inner">
+      <div class="featured-project__meta">
+        <span class="featured-badge featured-badge--cr">Website · Freelance · 2026</span>
+        <h2 class="featured-project__title">CRDESIGN</h2>
+        <p class="featured-project__sub featured-project__sub--cr" data-i18n="worksPage.crdesign.sub">Website Institucional · HTML/CSS/JS · PT/FR</p>
+        <p class="featured-project__desc" data-i18n="worksPage.crdesign.desc">Website completo para a CR Design, empresa de comunicação visual em Felgueiras. Construído de raiz em HTML, CSS e JS puro, bilingue em Português e Francês, com 14 categorias de serviços, galeria com lightbox e integração com WhatsApp.</p>
+        <a href="crdesign.html" class="btn-primary btn-crdesign" data-hover data-i18n="worksPage.crdesign.cta">Ver Case Study →</a>
+      </div>
+      <div class="featured-project__visual">
+        <div class="featured-project__video">
+          <div class="yt-facade" data-yt-id="Jhm1QnOyjwU" data-yt-title="Anúncio CR Design" data-yt-auto data-yt-thumb="projetos__CR__Imagem-inicial.webp" role="img" aria-label="Anúncio CR Design (pré-visualização em loop, sem som)">
+            <img class="yt-facade__thumb" src="projetos__CR__Imagem-inicial.webp" alt="" loading="lazy">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== Passion: RESTAURANTE ==================== -->
+  <section id="passion" class="featured-project reveal">
+    <div class="featured-project__inner">
+      <div class="featured-project__meta">
+        <span class="featured-badge featured-badge--passion" data-i18n="worksPage.passion.badge">Restaurante · Menus & Vídeo · 2026</span>
+        <h2 class="featured-project__title">PASSION</h2>
+        <p class="featured-project__sub featured-project__sub--passion" data-i18n="worksPage.passion.sub">Design de Menus · Vídeos Promocionais · Social Media</p>
+        <p class="featured-project__desc" data-i18n="worksPage.passion.desc">Para o restaurante Passion, criei uma série de menus com identidade visual própria e três vídeos promocionais, incluindo um especial para a época da seleção portuguesa. Conteúdo pensado para redes sociais e para o ambiente do espaço.</p>
+        <a href="passion.html" class="btn-primary btn-passion" data-hover data-i18n="worksPage.passion.cta">Ver Projeto →</a>
+      </div>
+      <div class="featured-project__visual">
+        <div class="featured-project__images">
+          <img src="projetos__Passion__menus__Sem Título-1.jpg" alt="Passion: Menu Design página 1" loading="lazy">
+          <div class="featured-col">
+            <img src="projetos__Passion__menus__Sem Título-3.jpg" alt="Passion: Menu Design página 3" loading="lazy">
+            <img src="projetos__Passion__passion.png" alt="Passion: Logótipo do restaurante" loading="lazy" style="object-fit:contain; background: rgba(240,237,232,0.04); padding: 12px;">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== BARBEARIA 24 ==================== -->
+  <section id="tf24" class="featured-project reveal">
+    <div class="featured-project__inner">
+      <div class="featured-project__meta">
+        <span class="featured-badge featured-badge--tf24" data-i18n="worksPage.tf24.badge">Barbearia · Vídeos TV & Social Media · Web Design · 2026</span>
+        <h2 class="featured-project__title">TWENTY FOUR</h2>
+        <p class="featured-project__sub featured-project__sub--tf24" data-i18n="worksPage.tf24.sub">Vídeos para TV · Social Media · Website em Construção</p>
+        <p class="featured-project__desc" data-i18n="worksPage.tf24.desc">Para a Barbearia Twenty Four em Felgueiras, produzi quatro anúncios em vídeo para passar em televisão no interior do salão e para redes sociais, com destaque para os produtos da casa: Arren, Reuzel e mais. O website está a ser desenvolvido e será lançado em breve em twentyfour.pt.</p>
+        <a href="24-barbearia.html" class="btn-primary btn-tf24" data-hover data-i18n="worksPage.tf24.cta">Ver Projeto →</a>
+      </div>
+      <div class="featured-project__visual">
+        <div class="site-preview-wrap">
+          <div class="site-preview-bar">
+            <div class="site-preview-bar__dots">
+              <span class="site-preview-bar__dot"></span>
+              <span class="site-preview-bar__dot"></span>
+              <span class="site-preview-bar__dot"></span>
+            </div>
+            <span class="site-preview-bar__url">twentyfour.pt</span>
+            <span class="site-preview-bar__badge" data-i18n="worksPage.comingSoon">Em breve</span>
+          </div>
+          <div class="site-preview-screen">
+            <img src="projetos__24__website thumb.png" alt="Website Twenty Four, preview" loading="lazy" style="filter:none;">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== ESSÊNCIA AOS PEDAÇOS: SOCIAL MEDIA ==================== -->
+  <div id="eap" class="social-feature reveal">
+    <div class="social-feature__inner">
+      <div class="social-feature__meta">
+        <span class="social-feature__badge">Social Media · Instagram</span>
+        <h2 class="social-feature__title">Essência Aos Pedaços</h2>
+        <p class="social-feature__desc" data-i18n="worksPage.eap.desc">Criação de conteúdo para Instagram de uma marca artesanal de doces e salgados, com posts de identidade visual própria, fotografia de produto e copywriting.</p>
+        <a href="https://www.instagram.com/essencia_aos_pedacos/" target="_blank" rel="noopener noreferrer" class="social-feature__link" aria-label="Ver Instagram da Essência Aos Pedaços" data-i18n-aria-label="worksPage.eap.aria">@essencia_aos_pedacos →</a>
+      </div>
+      <div class="social-feature__posts">
+        <div class="social-feature__post">
+          <img src="assets__img__works__eap__Prancheta-1.webp" alt="Essência Aos Pedaços: post Instagram" loading="lazy">
+        </div>
+        <div class="social-feature__post">
+          <img src="assets__img__works__eap__eugenia.webp" alt="Essência Aos Pedaços: Doces & Salgados Artesanais" loading="lazy">
+        </div>
+        <div class="social-feature__post">
+          <img src="assets__img__works__eap__aniversario.webp" alt="Essência Aos Pedaços: Momentos que merecem ser celebrados" loading="lazy">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==================== PAULA MAGALHÃES ==================== -->
+  <section id="paula-magalhaes" class="featured-project reveal">
+    <div class="featured-project__inner">
+      <div class="featured-project__meta">
+        <span class="featured-badge featured-badge--pm" data-i18n="worksPage.pm.badge">Hipnose · Coaching · Reiki · Vídeo · 2026</span>
+        <h2 class="featured-project__title">PAULA MAGALHÃES</h2>
+        <p class="featured-project__sub featured-project__sub--pm" data-i18n="worksPage.pm.sub">Vídeo Promocional · Social Media</p>
+        <p class="featured-project__desc" data-i18n="worksPage.pm.desc">Vídeo promocional para redes sociais, apresenta a Paula Magalhães e os seus serviços de Hipnose Clínica Integrativa e Transpessoal, Coaching, Reiki, IEMT e EFT. Produzido para Instagram com um tom acessível e profissional.</p>
+        <a href="paula-magalhaes.html" class="btn-primary btn-pm" data-hover data-i18n="worksPage.pm.cta">Ver Projeto →</a>
+      </div>
+      <div class="featured-project__visual">
+        <div style="max-width:260px;margin:0 auto;border-radius:18px;overflow:hidden;border:1px solid var(--pm-border);box-shadow:0 16px 56px rgba(91,158,114,0.12);">
+          <div class="yt-facade" data-yt-id="MOany_dvps4" data-yt-title="Vídeo promocional Paula Magalhães" data-yt-auto data-yt-thumb="https://i.ytimg.com/vi/MOany_dvps4/hqdefault.jpg" role="img" aria-label="Vídeo promocional Paula Magalhães (pré-visualização em loop, sem som)" style="aspect-ratio:9/16;">
+            <img class="yt-facade__thumb" src="https://i.ytimg.com/vi/MOany_dvps4/hqdefault.jpg" alt="" loading="lazy">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== BOLA MURCHA ==================== -->
+  <section id="bola-murcha" class="featured-project reveal">
+    <div class="featured-project__inner">
+      <div class="featured-project__meta">
+        <span class="featured-badge featured-badge--bm" data-i18n="worksPage.bm.badge">Desporto · Print · 2026</span>
+        <h2 class="featured-project__title">BOLA MURCHA</h2>
+        <p class="featured-project__sub featured-project__sub--bm" data-i18n="worksPage.bm.sub">Cartões de Visita · Design de Poster · Print</p>
+        <p class="featured-project__desc" data-i18n="worksPage.bm.desc">Para a Bola Murcha Store, criei os cartões de visita (frente e verso) com código de desconto e contactos, e um poster de camisolas do Mundial de Futebol para promoção nas redes sociais.</p>
+        <a href="bola-murcha.html" class="btn-primary btn-bm" data-hover data-i18n="worksPage.bm.cta">Ver Projeto →</a>
+      </div>
+      <div class="featured-project__visual">
+        <div class="featured-project__images featured-project__images--bm">
+          <img src="projetos__bola murcha__cartao frente2.jpg" alt="Bola Murcha: Cartão de visita frente" loading="lazy">
+          <div class="featured-col">
+            <img src="projetos__bola murcha__Cartao Verso2.jpg" alt="Bola Murcha: Cartão de visita verso" loading="lazy">
+            <img src="projetos__bola murcha__camisolas do mundial.jpg" alt="Bola Murcha: Poster camisolas do Mundial" loading="lazy">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== WORKS GALLERY ==================== -->
+  <section id="gallery" class="works-gallery">
+
+    <div class="works-grid">
+
+      <!-- SPORTS (6) -->
+      <div class="work-card glass-card" data-categories="sports">
+        <span class="work-num">01</span>
+        <img src="assets__img__works__desporto__MATCH-DAY-1.webp" alt="Match Day Graphics" loading="lazy" class="work-img">
+        <div class="work-overlay">
+          <p class="work-tag">Sports Design</p>
+          <p class="work-title">Match Day</p>
+        </div>
+      </div>
+      <div class="work-card glass-card" data-categories="sports">
+        <span class="work-num">02</span>
+        <img src="assets__img__works__desporto__Jogo.webp" alt="Pré-Jogo: Matchday Preview" loading="lazy" class="work-img">
+        <div class="work-overlay">
+          <p class="work-tag">Sports Design</p>
+          <p class="work-title" data-i18n="gallery.prejogo">Pré-Jogo</p>
+        </div>
+      </div>
+      <div class="work-card glass-card" data-categories="sports">
+        <span class="work-num">03</span>
+        <img src="assets__img__works__desporto__pedro-1.webp" alt="Pedro: Atleta" loading="lazy" class="work-img">
+        <div class="work-overlay">
+          <p class="work-tag">Sports Design</p>
+          <p class="work-title">Pedro: Atleta</p>
+        </div>
+      </div>
+      <div class="work-card glass-card" data-categories="sports">
+        <span class="work-num">04</span>
+        <img src="assets__img__works__desporto__pedro-3.webp" alt="Pedro: Performance" loading="lazy" class="work-img">
+        <div class="work-overlay">
+          <p class="work-tag">Sports Design</p>
+          <p class="work-title">Pedro: Performance</p>
+        </div>
+      </div>
+      <div class="work-card glass-card" data-categories="sports">
+        <span class="work-num">05</span>
+        <img src="assets__img__works__desporto__Resultado2.webp" alt="Resultado do Jogo" loading="lazy" class="work-img">
+        <div class="work-overlay">
+          <p class="work-tag">Sports Design</p>
+          <p class="work-title" data-i18n="gallery.resultado">Resultado</p>
+        </div>
+      </div>
+      <div class="work-card glass-card" data-categories="sports">
+        <span class="work-num">06</span>
+        <img src="assets__img__works__desporto__Sergio-s-logo.webp" alt="Sérgio: Logotipo" loading="lazy" class="work-img">
+        <div class="work-overlay">
+          <p class="work-tag">Sports Design</p>
+          <p class="work-title">Sérgio: Logotipo</p>
+        </div>
+      </div>
+
+      <!-- FASHION & STORES (9) -->
+      <div class="work-card glass-card" data-categories="fashion">
+        <span class="work-num">07</span>
+        <img src="assets__img__works__fashion__altitude.webp" alt="Altitude Store" loading="lazy" class="work-img">
+        <div class="work-overlay">
+          <p class="work-tag">Fashion & Stores</p>
+          <p class="work-title">Altitude Store</p>
+        </div>
+      </div>
+      <div class="work-card glass-card" data-categories="fashion">
+        <span class="work-num">08</span>
+        <img src="assets__img__works__fashion__aniversario.webp" alt="Poster Aniversário" loading="lazy" class="work-img">
+        <div class="work-overlay">
+          <p class="work-tag">Fashion & Stores</p>
+          <p class="work-title" data-i18n="gallery.aniversario">Aniversário</p>
+        </div>
+      </div>
+      <div class="work-card work-card--wide glass-card" data-categories="fashion">
+        <span class="work-num">09</span>
+        <img src="assets__img__works__fashion__Banner-fb.webp" alt="Banner Facebook" loading="lazy" class="work-img">
+        <div class="work-overlay">
+          <p class="work-tag">Fashion & Stores</p>
+          <p class="work-title">Banner Facebook</p>
+        </div>
+      </div>
+      <div class="work-card glass-card" data-categories="fashion">
+        <span class="work-num">10</span>
+        <img src="assets__img__works__fashion__bolo-ananas.webp" alt="Bolo Ananás" loading="lazy" class="work-img">
+        <div class="work-overlay">
+          <p class="work-tag">Fashion & Stores</p>
+          <p class="work-title">Bolo & Ananás</p>
+        </div>
+      </div>
+      <div class="work-card glass-card" data-categories="fashion">
+        <span class="work-num">11</span>
+        <img src="assets__img__works__fashion__Cris.webp" alt="Cris Store" loading="lazy" class="work-img">
+        <div class="work-overlay">
+          <p class="work-tag">Fashion & Stores</p>
+          <p class="work-title">Cris Store</p>
+        </div>
+      </div>
+      <div class="work-card glass-card" data-categories="fashion">
+        <span class="work-num">12</span>
+        <img src="assets__img__works__fashion__eugenia.webp" alt="Eugénia Store" loading="lazy" class="work-img">
+        <div class="work-overlay">
+          <p class="work-tag">Fashion & Stores</p>
+          <p class="work-title">Eugénia Store</p>
+        </div>
+      </div>
+      <div class="work-card glass-card" data-categories="fashion">
+        <span class="work-num">13</span>
+        <img src="assets__img__works__fashion__lamington.webp" alt="Lamington" loading="lazy" class="work-img">
+        <div class="work-overlay">
+          <p class="work-tag">Fashion & Stores</p>
+          <p class="work-title">Lamington</p>
+        </div>
+      </div>
+      <div class="work-card glass-card" data-categories="fashion">
+        <span class="work-num">14</span>
+        <img src="assets__img__works__fashion__natal.webp" alt="Campanha de Natal" loading="lazy" class="work-img">
+        <div class="work-overlay">
+          <p class="work-tag">Fashion & Stores</p>
+          <p class="work-title" data-i18n="gallery.natal">Natal</p>
+        </div>
+      </div>
+      <div class="work-card glass-card" data-categories="fashion">
+        <span class="work-num">15</span>
+        <img src="assets__img__works__fashion__Sem-Titulo-2.webp" alt="Campanha Fashion" loading="lazy" class="work-img">
+        <div class="work-overlay">
+          <p class="work-tag">Fashion & Stores</p>
+          <p class="work-title" data-i18n="gallery.campanha">Campanha</p>
+        </div>
+      </div>
+
+      <!-- ENTERTAINMENT (5) -->
+      <div class="work-card glass-card" data-categories="entertainment">
+        <span class="work-num">16</span>
+        <img src="assets__img__works__entretenimento__Arrow.webp" alt="Arrow: Série TV Poster" loading="lazy" class="work-img">
+        <div class="work-overlay">
+          <p class="work-tag">Entertainment</p>
+          <p class="work-title">Arrow: Série TV</p>
+        </div>
+      </div>
+      <div class="work-card glass-card" data-categories="entertainment">
+        <span class="work-num">17</span>
+        <img src="assets__img__works__entretenimento__Eminem.webp" alt="Eminem: Music Poster" loading="lazy" class="work-img">
+        <div class="work-overlay">
+          <p class="work-tag">Entertainment</p>
+          <p class="work-title">Eminem</p>
+        </div>
+      </div>
+      <div class="work-card glass-card" data-categories="entertainment">
+        <span class="work-num">18</span>
+        <img src="assets__img__works__entretenimento__Jinx.webp" alt="Jinx: Arcane Poster" loading="lazy" class="work-img">
+        <div class="work-overlay">
+          <p class="work-tag">Entertainment</p>
+          <p class="work-title">Jinx: Arcane</p>
+        </div>
+      </div>
+      <div class="work-card glass-card" data-categories="entertainment">
+        <span class="work-num">19</span>
+        <img src="assets__img__works__entretenimento__Kratos.webp" alt="Kratos: God of War Poster" loading="lazy" class="work-img">
+        <div class="work-overlay">
+          <p class="work-tag">Entertainment</p>
+          <p class="work-title">Kratos: God of War</p>
+        </div>
+      </div>
+      <div class="work-card glass-card" data-categories="entertainment">
+        <span class="work-num">20</span>
+        <img src="assets__img__works__entretenimento__Uncharted-4.webp" alt="Uncharted 4 Poster" loading="lazy" class="work-img">
+        <div class="work-overlay">
+          <p class="work-tag">Entertainment</p>
+          <p class="work-title">Uncharted 4</p>
+        </div>
+      </div>
+
+      <!-- Passion: MENUS (print) -->
+      <div class="work-card glass-card" data-categories="print">
+        <span class="work-num">21</span>
+        <img src="projetos__Passion__menus__Sem Título-1.jpg" alt="Passion: Menu Design, capa" loading="lazy" class="work-img">
+        <div class="work-overlay">
+          <p class="work-tag">Passion · Menu Design</p>
+          <p class="work-title" data-i18n="gallery.menuCapa">Menu: Capa</p>
+        </div>
+      </div>
+      <div class="work-card glass-card" data-categories="print">
+        <span class="work-num">22</span>
+        <img src="projetos__Passion__menus__Sem Título-2.jpg" alt="Passion: Menu Design, entradas" loading="lazy" class="work-img">
+        <div class="work-overlay">
+          <p class="work-tag">Passion · Menu Design</p>
+          <p class="work-title" data-i18n="gallery.menuEntradas">Menu: Entradas</p>
+        </div>
+      </div>
+      <div class="work-card glass-card" data-categories="print">
+        <span class="work-num">23</span>
+        <img src="projetos__Passion__menus__Sem Título-4.jpg" alt="Passion: Menu Design, pratos" loading="lazy" class="work-img">
+        <div class="work-overlay">
+          <p class="work-tag">Passion · Menu Design</p>
+          <p class="work-title" data-i18n="gallery.menuPratos">Menu: Pratos</p>
+        </div>
+      </div>
+      <div class="work-card glass-card" data-categories="print">
+        <span class="work-num">24</span>
+        <img src="projetos__Passion__menus__Sem Título-6.jpg" alt="Passion: Menu Design, sobremesas" loading="lazy" class="work-img">
+        <div class="work-overlay">
+          <p class="work-tag">Passion · Menu Design</p>
+          <p class="work-title" data-i18n="gallery.menuSobremesas">Menu: Sobremesas</p>
+        </div>
+      </div>
+
+      <!-- BOLA MURCHA (print) -->
+      <div class="work-card work-card--wide glass-card" data-categories="print">
+        <span class="work-num">25</span>
+        <img src="projetos__bola murcha__cartao frente2.jpg" alt="Bola Murcha: Cartão de visita frente" loading="lazy" class="work-img">
+        <div class="work-overlay">
+          <p class="work-tag">Bola Murcha · Print</p>
+          <p class="work-title" data-i18n="gallery.cartaoFrente">Cartão: Frente</p>
+        </div>
+      </div>
+      <div class="work-card work-card--wide glass-card" data-categories="print">
+        <span class="work-num">26</span>
+        <img src="projetos__bola murcha__Cartao Verso2.jpg" alt="Bola Murcha: Cartão de visita verso" loading="lazy" class="work-img">
+        <div class="work-overlay">
+          <p class="work-tag">Bola Murcha · Print</p>
+          <p class="work-title" data-i18n="gallery.cartaoVerso">Cartão: Verso</p>
+        </div>
+      </div>
+      <div class="work-card glass-card" data-categories="print">
+        <span class="work-num">27</span>
+        <img src="projetos__bola murcha__camisolas do mundial.jpg" alt="Bola Murcha: Camisolas do Mundial de Futebol" loading="lazy" class="work-img">
+        <div class="work-overlay">
+          <p class="work-tag">Bola Murcha · Sports</p>
+          <p class="work-title" data-i18n="gallery.camisolasMundial">Camisolas do Mundial</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+<!-- ==================== SITE FOOTER ==================== -->
+<section class="site-footer">
+  <div class="site-footer__decal">GA</div>
+  <div class="site-footer__top reveal">
+    <div class="site-footer__intro">
+      <p class="section-label"><span data-i18n="siteFooter.label">[04] CONTACTO</span></p>
+      <h2 class="site-footer__title" data-i18n-html="siteFooter.title">Vamos criar<br>algo que<br>fica na <span class="site-footer-title-italic">memória.</span></h2>
+    </div>
+    <div class="site-footer__contact">
+      <a href="mailto:garisign2025@gmail.com" class="site-footer__email">garisign2025@gmail.com</a>
+      <p class="site-footer__text" data-i18n="siteFooter.location">Felgueiras, Portugal, disponível remotamente</p>
+      <p class="site-footer__text site-footer__text--muted" data-i18n="siteFooter.areas">Design Gráfico · Motion Design · Edição de Vídeo</p>
+      <a href="contacto.html" class="btn-primary" data-hover data-i18n="siteFooter.button">Ver Contacto →</a>
+    </div>
+  </div>
+  <hr class="site-footer__separator">
+  <div class="site-footer__bottom">
+    <a href="index.html" class="site-footer__logo">GARISIGN</a>
+    <p class="site-footer__copy" data-i18n="footer.copy">© 2025 Garisign Designer. Todos os direitos reservados.</p>
+    <div class="site-footer__links">
+      <a href="https://instagram.com/garisign.designer" target="_blank" rel="noopener noreferrer">INSTAGRAM</a>
+      <a href="https://tiktok.com/@garisign_designer" target="_blank" rel="noopener noreferrer">TIKTOK</a>
+      <a href="mailto:garisign2025@gmail.com">EMAIL</a>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== LIGHTBOX ==================== -->
+<div id="lightbox" role="dialog" aria-modal="true" aria-label="Imagem ampliada" data-i18n-aria-label="lightbox.label">
+  <button id="lb-close" aria-label="Fechar" data-i18n-aria-label="lightbox.close">&times;</button>
+  <button id="lb-prev" aria-label="Anterior" data-i18n-aria-label="lightbox.prev">&#8592;</button>
+  <button id="lb-next" aria-label="Próxima" data-i18n-aria-label="lightbox.next">&#8594;</button>
+  <div id="lb-img-wrap">
+    <img id="lb-img" src="" alt="">
+  </div>
+  <span id="lb-count"></span>
+</div>
+
+<script src="js__translations.js" defer></script>
+<script src="js__script.js" defer></script>
+<script src="js__trabalhos.js" defer></script>
+</body>
+</html>

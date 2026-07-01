@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Case study: Bola Murcha: identidade visual, cartões de visita e design de camisolas por Garisign Designer.">
+<meta name="author" content="Gabriel, Garisign Designer">
+<link rel="icon" type="image/svg+xml" href="assets__img__logotipo__LOGO.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload" href="fonts__Agdasima-Regular.ttf" as="font" type="font/ttf" crossorigin>
+<link rel="preload" href="fonts__Comfortaa-Light.ttf" as="font" type="font/ttf" crossorigin>
+<link rel="preload" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital@1&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital@1&display=swap"></noscript>
+<link rel="stylesheet" href="css__styles.css">
+<title>Bola Murcha: Garisign Designer</title>
+<style>
+:root {
+  --bm-blue: #2563eb;
+  --bm-blue2: #3b82f6;
+  --bm-dim: rgba(37,99,235,0.10);
+  --bm-dim2: rgba(37,99,235,0.05);
+  --bm-border: rgba(37,99,235,0.25);
+}
+
+/* ------ HERO ------ */
+.bm-hero {
+  min-height: 100svh;
+  display: flex; flex-direction: column; justify-content: flex-end;
+  padding: clamp(80px,10vw,140px) clamp(24px,6vw,100px) clamp(60px,8vw,100px);
+  position: relative; overflow: hidden; z-index: 2;
+}
+.bm-hero::before {
+  content: '';
+  position: absolute; inset: 0; z-index: 0;
+  background:
+    radial-gradient(ellipse 60% 50% at 75% 20%, rgba(37,99,235,0.07) 0%, transparent 60%),
+    radial-gradient(ellipse 40% 40% at 15% 85%, rgba(37,99,235,0.04) 0%, transparent 60%);
+  pointer-events: none;
+}
+.bm-hero__back {
+  position: absolute; top: clamp(80px,10vw,116px); left: clamp(24px,6vw,100px);
+  font-size: 11px; letter-spacing: 2.5px; text-transform: uppercase;
+  color: rgba(240,237,232,0.35); text-decoration: none;
+  display: flex; align-items: center; gap: 8px;
+  transition: color 0.3s; z-index: 2;
+}
+.bm-hero__back:hover { color: var(--bm-blue2); }
+.bm-hero__content { position: relative; z-index: 2; }
+.bm-hero__badge {
+  display: inline-flex; align-items: center; gap: 8px;
+  padding: 5px 14px; border-radius: 40px;
+  background: var(--bm-dim); border: 1px solid var(--bm-border);
+  font-size: 11px; letter-spacing: 2px; text-transform: uppercase;
+  color: var(--bm-blue2); margin-bottom: 24px;
+}
+.bm-hero__badge::before {
+  content: ''; width: 6px; height: 6px; border-radius: 50%;
+  background: var(--bm-blue2); flex-shrink: 0;
+  animation: pulse-dot 2.4s ease-in-out infinite;
+}
+.bm-hero__title {
+  font-family: 'Agdasima', sans-serif;
+  font-size: clamp(64px,12vw,180px);
+  line-height: 0.85; letter-spacing: 4px;
+  color: var(--cream); margin-bottom: 8px;
+}
+.bm-hero__title2 {
+  font-family: 'Agdasima', sans-serif;
+  font-size: clamp(40px,7vw,110px);
+  line-height: 0.85; letter-spacing: 4px;
+  color: var(--bm-blue2); margin-bottom: 18px;
+}
+.bm-hero__sub {
+  font-size: clamp(12px,1.3vw,15px); letter-spacing: 1px;
+  color: rgba(240,237,232,0.4); margin-bottom: 32px;
+}
+.bm-hero__chips { display: flex; flex-wrap: wrap; gap: 10px; }
+.bm-chip {
+  padding: 6px 14px; border-radius: 40px;
+  font-size: 10px; letter-spacing: 1.5px; text-transform: uppercase;
+  background: rgba(240,237,232,0.04); border: 1px solid rgba(240,237,232,0.1);
+  color: rgba(240,237,232,0.45);
+}
+.bm-chip--blue {
+  background: var(--bm-dim); border-color: var(--bm-border);
+  color: var(--bm-blue2);
+}
+
+/* ------ SECÇÕES ------ */
+.bm-section {
+  padding: clamp(60px,8vw,100px) clamp(24px,6vw,100px);
+  position: relative; z-index: 2;
+  border-top: 1px solid rgba(240,237,232,0.06);
+}
+.bm-num {
+  font-size: 11px; font-weight: 600; letter-spacing: 3px; text-transform: uppercase;
+  color: var(--bm-blue2); margin-bottom: 14px; display: block;
+}
+.bm-title {
+  font-family: 'Agdasima', sans-serif;
+  font-size: clamp(38px,5vw,68px); color: var(--cream);
+  letter-spacing: 2px; line-height: 0.95; margin-bottom: 36px;
+}
+.bm-lead {
+  font-size: clamp(15px,1.4vw,17px); line-height: 1.8;
+  color: rgba(240,237,232,0.58); max-width: 680px; margin-bottom: 40px;
+}
+
+/* ------ [01] PROJETO ------ */
+.bm-projeto-grid {
+  display: grid; grid-template-columns: 1fr 1fr;
+  gap: clamp(32px,5vw,64px); align-items: start;
+}
+.bm-projeto__text {
+  font-size: clamp(15px,1.4vw,17px); line-height: 1.8;
+  color: rgba(240,237,232,0.65);
+}
+.bm-projeto__text p + p { margin-top: 16px; }
+.bm-info-card {
+  background: var(--bm-dim2); border: 1px solid var(--bm-border);
+  border-radius: var(--radius); padding: clamp(20px,3vw,32px);
+}
+.bm-info-card__label {
+  font-size: 10px; letter-spacing: 3px; text-transform: uppercase;
+  color: var(--bm-blue2); margin-bottom: 18px; display: block;
+}
+.bm-info-row {
+  display: flex; justify-content: space-between; align-items: baseline;
+  padding: 11px 0; border-bottom: 1px solid rgba(37,99,235,0.1);
+}
+.bm-info-row:last-child { border-bottom: none; }
+.bm-info-row__key { font-size: 12px; color: rgba(240,237,232,0.38); }
+.bm-info-row__val { font-size: 13px; color: var(--cream); font-weight: 500; text-align: right; }
+@media (max-width: 768px) {
+  .bm-projeto-grid { grid-template-columns: 1fr; }
+}
+
+/* ------ [02] LOGÓTIPO ------ */
+.bm-logo-showcase {
+  display: flex; align-items: center; justify-content: center;
+  padding: clamp(48px,7vw,96px);
+  background: rgba(240,237,232,0.025); border: 1px solid rgba(240,237,232,0.07);
+  border-radius: var(--radius-lg);
+  position: relative; overflow: hidden;
+}
+.bm-logo-showcase::before {
+  content: '';
+  position: absolute; inset: 0;
+  background: radial-gradient(ellipse 60% 60% at 50% 50%, rgba(37,99,235,0.06) 0%, transparent 70%);
+}
+.bm-logo-showcase img {
+  max-width: min(480px, 80%); position: relative; z-index: 1;
+  filter: drop-shadow(0 8px 40px rgba(37,99,235,0.15));
+}
+
+/* ------ [02] MATERIAIS + FLIP CARD ------ */
+.bm-materials-grid {
+  display: grid;
+  grid-template-columns: 1.15fr 1fr;
+  gap: 20px;
+  align-items: start;
+}
+.bm-material-card {
+  background: rgba(240,237,232,0.025); border: 1px solid rgba(240,237,232,0.07);
+  border-radius: var(--radius); overflow: hidden;
+  transition: border-color 0.3s, transform 0.4s var(--transition);
+}
+.bm-material-card:hover {
+  border-color: var(--bm-border); transform: translateY(-4px);
+}
+.bm-material-card img {
+  width: 100%; display: block; object-fit: cover;
+  aspect-ratio: 4/3;
+  transition: transform 0.6s var(--transition);
+}
+.bm-material-card:hover img { transform: scale(1.04); }
+.bm-material-card--poster img { aspect-ratio: 9/16; }
+.bm-material-card__meta { padding: 14px 16px; }
+.bm-material-card__tag {
+  font-size: 10px; letter-spacing: 2.5px; text-transform: uppercase;
+  color: var(--bm-blue2); display: block; margin-bottom: 4px;
+}
+.bm-material-card__title {
+  font-family: 'Agdasima', sans-serif; font-size: 18px;
+  color: var(--cream); letter-spacing: 1px;
+}
+
+/* Flip card */
+.bm-flip-card {
+  perspective: 1200px;
+  cursor: pointer;
+  outline: none;
+}
+.bm-flip-card__inner {
+  position: relative;
+  transition: transform 0.72s cubic-bezier(0.4,0,0.2,1);
+  transform-style: preserve-3d;
+  border-radius: var(--radius);
+}
+.bm-flip-card:hover .bm-flip-card__inner,
+.bm-flip-card.is-flipped .bm-flip-card__inner {
+  transform: rotateY(180deg);
+}
+.bm-flip-card__face {
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  border-radius: var(--radius);
+  overflow: hidden;
+  border: 1px solid rgba(240,237,232,0.07);
+}
+.bm-flip-card__face img {
+  width: 100%; display: block;
+  object-fit: cover; aspect-ratio: 4/3;
+}
+.bm-flip-card__back-face {
+  position: absolute;
+  inset: 0;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  transform: rotateY(180deg);
+  border-radius: var(--radius);
+  overflow: hidden;
+  border: 1px solid var(--bm-border);
+}
+.bm-flip-card__back-face img {
+  width: 100%; height: 100%; display: block; object-fit: cover;
+}
+.bm-flip-card__hint {
+  font-size: 10px; letter-spacing: 1.8px; text-transform: uppercase;
+  color: rgba(240,237,232,0.28); text-align: center;
+  margin-top: 10px; display: flex; align-items: center;
+  justify-content: center; gap: 6px; font-family: 'Comfortaa', sans-serif;
+  transition: color 0.3s;
+}
+.bm-flip-card:hover .bm-flip-card__hint { color: var(--bm-blue2); }
+.bm-flip-card__meta { padding: 14px 16px; }
+.bm-flip-card__tag {
+  font-size: 10px; letter-spacing: 2.5px; text-transform: uppercase;
+  color: var(--bm-blue2); display: block; margin-bottom: 4px;
+}
+.bm-flip-card__title {
+  font-family: 'Agdasima', sans-serif; font-size: 18px;
+  color: var(--cream); letter-spacing: 1px;
+}
+@media (max-width: 768px) {
+  .bm-materials-grid { grid-template-columns: 1fr; }
+}
+
+/* ------ CTA ------ */
+.bm-cta {
+  padding: clamp(64px,9vw,110px) clamp(24px,6vw,100px);
+  text-align: center; position: relative; z-index: 2;
+  border-top: 1px solid rgba(240,237,232,0.06);
+}
+.bm-cta__eyebrow {
+  font-size: 11px; letter-spacing: 3px; text-transform: uppercase;
+  color: var(--bm-blue2); margin-bottom: 16px;
+}
+.bm-cta__title {
+  font-family: 'Agdasima', sans-serif;
+  font-size: clamp(44px,7vw,90px);
+  color: var(--cream); letter-spacing: 2px; line-height: 0.9;
+  margin-bottom: 12px;
+}
+.bm-cta__sub {
+  font-size: 14px; color: rgba(240,237,232,0.38);
+  margin-bottom: 36px; font-weight: 300;
+}
+.bm-cta__btns {
+  display: flex; justify-content: center; gap: 14px; flex-wrap: wrap;
+}
+.btn-bm {
+  background: var(--bm-blue); color: #fff;
+  box-shadow: 0 4px 32px rgba(37,99,235,0.22);
+}
+.btn-bm:hover {
+  background: var(--bm-blue2); transform: translateY(-2px);
+  box-shadow: 0 8px 48px rgba(37,99,235,0.36);
+}
+.btn-ghost {
+  background: transparent; border: 1px solid rgba(240,237,232,0.18);
+  color: rgba(240,237,232,0.55);
+}
+.btn-ghost:hover {
+  border-color: rgba(240,237,232,0.35); color: var(--cream);
+  transform: translateY(-2px);
+}
+</style>
+</head>
+<body>
+
+<div id="scroll-progress"></div>
+<div id="cursor"></div>
+<div id="cursor-ring"></div>
+<canvas id="bg-canvas"></canvas>
+<div class="noise"></div>
+
+<nav id="navbar">
+  <a href="index.html" class="nav-logo" data-hover>
+    <div class="nav-logo-mark"><img src="assets__img__logotipo__LOGO.svg" alt="Logótipo Garisign" width="32" height="32"></div>
+    <span class="nav-logo-text">Garisign</span>
+  </a>
+  <ul class="nav-links">
+    <li><a href="index.html" data-nav data-i18n="nav.home">Início</a></li>
+    <li><a href="trabalhos.html" data-nav class="active" data-i18n="nav.works">Trabalhos</a></li>
+    <li><a href="index.html#services" data-nav data-i18n="nav.services">Serviços</a></li>
+    <li><a href="sobre.html" data-nav data-i18n="nav.about">Sobre</a></li>
+    <li><a href="contacto.html" data-nav data-i18n="nav.contact">Contacto</a></li>
+  </ul>
+  <div class="nav-right">
+    <div class="lang-toggle">
+      <button type="button" class="lang-btn active" data-lang="pt" id="btn-pt">PT</button>
+      <button type="button" class="lang-btn" data-lang="en" id="btn-en">EN</button>
+    </div>
+    <button type="button" id="nav-toggle" class="nav-toggle" aria-label="Menu" onclick="toggleMenu()">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<div id="mobile-menu" class="mobile-menu" aria-hidden="true">
+  <ul>
+    <li><a href="index.html" onclick="toggleMenu()" data-i18n="nav.home">Início</a></li>
+    <li><a href="trabalhos.html" onclick="toggleMenu()" data-i18n="nav.works">Trabalhos</a></li>
+    <li><a href="index.html#services" onclick="toggleMenu()" data-i18n="nav.services">Serviços</a></li>
+    <li><a href="index.html#about" onclick="toggleMenu()" data-i18n="nav.about">Sobre</a></li>
+    <li><a href="contacto.html" onclick="toggleMenu()" data-i18n="nav.contact">Contacto</a></li>
+  </ul>
+</div>
+
+<main>
+
+  <!-- HERO -->
+  <section class="bm-hero">
+    <a href="trabalhos.html" class="bm-hero__back" data-i18n="bm.hero.back">← Trabalhos</a>
+    <div class="bm-hero__content reveal">
+      <div class="bm-hero__badge">Desporto · Print · 2026</div>
+      <h1 class="bm-hero__title">BOLA</h1>
+      <p class="bm-hero__title2">MURCHA</p>
+      <p class="bm-hero__sub">Cartões de visita e poster de camisolas para marca desportiva</p>
+      <div class="bm-hero__chips">
+        <span class="bm-chip bm-chip--blue" data-i18n="bm.hero.chip1">Cartões de Visita</span>
+        <span class="bm-chip bm-chip--blue" data-i18n="bm.hero.chip2">Design de Poster</span>
+        <span class="bm-chip" data-i18n="bm.hero.chip3">Print</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- [01] O PROJETO -->
+  <section class="bm-section reveal">
+    <span class="bm-num" data-i18n="bm.s01.num">[01] O Projeto</span>
+    <h2 class="bm-title" data-i18n-html="bm.s01.title">Uma Marca<br>com Personalidade</h2>
+    <div class="bm-projeto-grid">
+      <div class="bm-projeto__text">
+        <p data-i18n="bm.s01.p1">A Bola Murcha Store é uma marca desportiva com uma personalidade irreverente: vende camisolas de futebol atuais, retrô e personalizadas, com entrega via CTT e contacto direto pelo Instagram.</p>
+        <p data-i18n="bm.s01.p2">O trabalho incluiu a criação de cartões de visita (frente e verso) com código de desconto, informações de contacto e website, e um poster de camisolas do Mundial de Futebol, criado para promoção dos produtos nas redes sociais.</p>
+      </div>
+      <div class="bm-info-card">
+        <span class="bm-info-card__label" data-i18n="bm.s01.infolabel">Detalhes do Projeto</span>
+        <div class="bm-info-row">
+          <span class="bm-info-row__key" data-i18n="bm.s01.row1key">Cliente</span>
+          <span class="bm-info-row__val">Bola Murcha Store</span>
+        </div>
+        <div class="bm-info-row">
+          <span class="bm-info-row__key" data-i18n="bm.s01.row2key">Setor</span>
+          <span class="bm-info-row__val" data-i18n="bm.s01.row2val">Desporto · Retalho</span>
+        </div>
+        <div class="bm-info-row">
+          <span class="bm-info-row__key" data-i18n="bm.s01.row3key">Tipo</span>
+          <span class="bm-info-row__val" data-i18n="bm.s01.row3val">Print · Design</span>
+        </div>
+        <div class="bm-info-row">
+          <span class="bm-info-row__key" data-i18n="bm.s01.row4key">Entregáveis</span>
+          <span class="bm-info-row__val" data-i18n="bm.s01.row4val">Cartões de Visita · Poster</span>
+        </div>
+        <div class="bm-info-row">
+          <span class="bm-info-row__key" data-i18n="bm.s01.row5key">Ferramentas</span>
+          <span class="bm-info-row__val">Photoshop · Illustrator</span>
+        </div>
+        <div class="bm-info-row">
+          <span class="bm-info-row__key" data-i18n="bm.s01.row6key">Ano</span>
+          <span class="bm-info-row__val">2026</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- [02] MATERIAIS -->
+  <section class="bm-section reveal">
+    <span class="bm-num" data-i18n="bm.s03.num">[02] Materiais</span>
+    <h2 class="bm-title" data-i18n-html="bm.s03.title">Cartões &<br>Poster</h2>
+    <p class="bm-lead" data-i18n="bm.s03.lead">Dois entregáveis para a Bola Murcha Store: cartões de visita com código de desconto e contactos, e um poster de promoção das camisolas do Mundial para redes sociais.</p>
+    <div class="bm-materials-grid">
+      <!-- Flip card -->
+      <div>
+        <div class="bm-flip-card"
+             role="button" tabindex="0"
+             aria-label="Cartão de visita Bola Murcha: clica para ver o verso"
+             onclick="this.classList.toggle('is-flipped')"
+             onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();this.classList.toggle('is-flipped')}">
+          <div class="bm-flip-card__inner">
+            <div class="bm-flip-card__face">
+              <img src="projetos__bola murcha__cartao frente2.jpg" alt="Bola Murcha: Cartão de visita frente" loading="lazy">
+            </div>
+            <div class="bm-flip-card__back-face">
+              <img src="projetos__bola murcha__Cartao Verso2.jpg" alt="Bola Murcha: Cartão de visita verso" loading="lazy">
+            </div>
+          </div>
+        </div>
+        <p class="bm-flip-card__hint">
+          <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M17 1l4 4-4 4M3 11V9a4 4 0 014-4h14M7 23l-4-4 4-4M21 13v2a4 4 0 01-4 4H3"/></svg>
+          Hover ou clica para ver o verso
+        </p>
+        <div class="bm-flip-card__meta" style="margin-top:8px;">
+          <span class="bm-flip-card__tag" data-i18n="bm.s03.card1tag">Cartão de Visita</span>
+          <p class="bm-flip-card__title">Frente &amp; Verso</p>
+        </div>
+      </div>
+      <!-- Poster camisolas -->
+      <div class="bm-material-card bm-material-card--poster">
+        <img src="projetos__bola murcha__camisolas do mundial.jpg" alt="Bola Murcha: Poster de camisolas do Mundial de Futebol" loading="lazy">
+        <div class="bm-material-card__meta">
+          <span class="bm-material-card__tag" data-i18n="bm.s03.card3tag">Design de Produto</span>
+          <p class="bm-material-card__title" data-i18n="bm.s03.card3title">Camisolas do Mundial</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <div class="bm-cta reveal">
+    <p class="bm-cta__eyebrow" data-i18n="bm.cta.eyebrow">Próximo Projeto</p>
+    <h2 class="bm-cta__title" data-i18n-html="bm.cta.title">A Tua<br>Marca</h2>
+    <p class="bm-cta__sub" data-i18n="bm.cta.sub">Tens uma marca desportiva, uma loja, um projeto? Vamos criar materiais com personalidade e impacto.</p>
+    <div class="bm-cta__btns">
+      <a href="contacto.html" class="btn-primary btn-bm" data-hover data-i18n="bm.cta.contact">Fala Comigo →</a>
+      <a href="trabalhos.html" class="btn-primary btn-ghost" data-hover data-i18n="bm.cta.back">← Outros Trabalhos</a>
+    </div>
+  </div>
+
+</main>
+
+<!-- SITE FOOTER -->
+<section class="site-footer">
+  <div class="site-footer__decal">GA</div>
+  <div class="site-footer__top reveal">
+    <div class="site-footer__intro">
+      <p class="section-label"><span data-i18n="siteFooter.label">[04] CONTACTO</span></p>
+      <h2 class="site-footer__title" data-i18n-html="siteFooter.title">Vamos criar<br>algo que<br>fica na <span class="site-footer-title-italic">memória.</span></h2>
+    </div>
+    <div class="site-footer__contact">
+      <a href="mailto:garisign2025@gmail.com" class="site-footer__email">garisign2025@gmail.com</a>
+      <p class="site-footer__text" data-i18n="siteFooter.location">Felgueiras, Portugal, disponível remotamente</p>
+      <p class="site-footer__text site-footer__text--muted" data-i18n="siteFooter.areas">Design Gráfico · Motion Design · Edição de Vídeo</p>
+      <a href="contacto.html" class="btn-primary" data-hover data-i18n="siteFooter.button">Ver Contacto →</a>
+    </div>
+  </div>
+  <hr class="site-footer__separator">
+  <div class="site-footer__bottom">
+    <a href="index.html" class="site-footer__logo">GARISIGN</a>
+    <p class="site-footer__copy" data-i18n="footer.copy">© 2025 Garisign Designer. Todos os direitos reservados.</p>
+    <div class="site-footer__links">
+      <a href="https://instagram.com/garisign.designer" target="_blank" rel="noopener noreferrer">INSTAGRAM</a>
+      <a href="https://tiktok.com/@garisign_designer" target="_blank" rel="noopener noreferrer">TIKTOK</a>
+      <a href="mailto:garisign2025@gmail.com">EMAIL</a>
+    </div>
+  </div>
+</section>
+
+<script src="js__translations.js" defer></script>
+<script src="js__script.js" defer></script>
+</body>
+</html>
+

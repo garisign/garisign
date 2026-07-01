@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Case study: Passion Restaurante: design de menus e vídeos promocionais por Garisign Designer.">
+<meta name="author" content="Gabriel, Garisign Designer">
+<link rel="icon" type="image/svg+xml" href="assets__img__logotipo__LOGO.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload" href="fonts__Agdasima-Regular.ttf" as="font" type="font/ttf" crossorigin>
+<link rel="preload" href="fonts__Comfortaa-Light.ttf" as="font" type="font/ttf" crossorigin>
+<link rel="preload" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital@1&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital@1&display=swap"></noscript>
+<link rel="stylesheet" href="css__styles.css">
+<title>Passion: Garisign Designer</title>
+<style>
+:root {
+  --ps-warm: #d4670c;
+  --ps-red: #c0392b;
+  --ps-dim: rgba(212,103,12,0.12);
+  --ps-dim2: rgba(212,103,12,0.06);
+  --ps-border: rgba(212,103,12,0.28);
+}
+
+/* ------ HERO ------ */
+.ps-hero {
+  min-height: 100svh;
+  display: flex; flex-direction: column; justify-content: flex-end;
+  padding: clamp(80px,10vw,140px) clamp(24px,6vw,100px) clamp(60px,8vw,100px);
+  position: relative; overflow: hidden; z-index: 2;
+}
+.ps-hero::before {
+  content: '';
+  position: absolute; inset: 0; z-index: 0;
+  background: radial-gradient(ellipse 70% 55% at 70% 30%, rgba(212,103,12,0.07) 0%, transparent 65%);
+  pointer-events: none;
+}
+.ps-hero__back {
+  position: absolute; top: clamp(80px,10vw,116px); left: clamp(24px,6vw,100px);
+  font-size: 11px; letter-spacing: 2.5px; text-transform: uppercase;
+  color: rgba(240,237,232,0.35); text-decoration: none;
+  display: flex; align-items: center; gap: 8px;
+  transition: color 0.3s; z-index: 2;
+}
+.ps-hero__back:hover { color: var(--ps-warm); }
+.ps-hero__content { position: relative; z-index: 2; }
+.ps-hero__badge {
+  display: inline-flex; align-items: center; gap: 8px;
+  padding: 5px 14px; border-radius: 40px;
+  background: var(--ps-dim); border: 1px solid var(--ps-border);
+  font-size: 11px; letter-spacing: 2px; text-transform: uppercase;
+  color: var(--ps-warm); margin-bottom: 24px;
+}
+.ps-hero__badge::before {
+  content: ''; width: 6px; height: 6px; border-radius: 50%;
+  background: var(--ps-warm); flex-shrink: 0;
+  animation: pulse-dot 2.4s ease-in-out infinite;
+}
+.ps-hero__logo {
+  width: clamp(80px,10vw,140px); margin-bottom: 20px; display: block;
+  object-fit: contain;
+}
+.ps-hero__title {
+  font-family: 'Agdasima', sans-serif;
+  font-size: clamp(80px,14vw,200px);
+  line-height: 0.85; letter-spacing: 4px;
+  color: var(--cream); margin-bottom: 18px;
+}
+.ps-hero__sub {
+  font-size: clamp(12px,1.3vw,15px); letter-spacing: 1px;
+  color: rgba(240,237,232,0.4); margin-bottom: 32px;
+}
+.ps-hero__chips { display: flex; flex-wrap: wrap; gap: 10px; }
+.ps-chip {
+  padding: 6px 14px; border-radius: 40px;
+  font-size: 10px; letter-spacing: 1.5px; text-transform: uppercase;
+  background: rgba(240,237,232,0.04); border: 1px solid rgba(240,237,232,0.1);
+  color: rgba(240,237,232,0.45);
+}
+.ps-chip--warm {
+  background: var(--ps-dim); border-color: var(--ps-border);
+  color: var(--ps-warm);
+}
+
+/* ------ SECÇÕES COMUNS ------ */
+.ps-section {
+  padding: clamp(60px,8vw,100px) clamp(24px,6vw,100px);
+  position: relative; z-index: 2;
+  border-top: 1px solid rgba(240,237,232,0.06);
+}
+.ps-num {
+  font-size: 11px; font-weight: 600; letter-spacing: 3px; text-transform: uppercase;
+  color: var(--ps-warm); margin-bottom: 14px; display: block;
+}
+.ps-title {
+  font-family: 'Agdasima', sans-serif;
+  font-size: clamp(38px,5vw,68px); color: var(--cream);
+  letter-spacing: 2px; line-height: 0.95; margin-bottom: 36px;
+}
+.ps-lead {
+  font-size: clamp(15px,1.4vw,17px); line-height: 1.8;
+  color: rgba(240,237,232,0.58); max-width: 680px; margin-bottom: 40px;
+}
+
+/* ------ [01] PROJETO ------ */
+.ps-projeto-grid {
+  display: grid; grid-template-columns: 1fr 1fr;
+  gap: clamp(32px,5vw,64px); align-items: start;
+}
+.ps-projeto__text {
+  font-size: clamp(15px,1.4vw,17px); line-height: 1.8;
+  color: rgba(240,237,232,0.65);
+}
+.ps-projeto__text p + p { margin-top: 16px; }
+.ps-info-card {
+  background: var(--ps-dim2); border: 1px solid var(--ps-border);
+  border-radius: var(--radius); padding: clamp(20px,3vw,32px);
+}
+.ps-info-card__label {
+  font-size: 10px; letter-spacing: 3px; text-transform: uppercase;
+  color: var(--ps-warm); margin-bottom: 18px; display: block;
+}
+.ps-info-row {
+  display: flex; justify-content: space-between; align-items: baseline;
+  padding: 11px 0; border-bottom: 1px solid rgba(212,103,12,0.1);
+}
+.ps-info-row:last-child { border-bottom: none; }
+.ps-info-row__key { font-size: 12px; color: rgba(240,237,232,0.38); }
+.ps-info-row__val { font-size: 13px; color: var(--cream); font-weight: 500; text-align: right; }
+@media (max-width: 768px) {
+  .ps-projeto-grid { grid-template-columns: 1fr; }
+}
+
+/* ------ [02] GALERIA DE MENUS ------ */
+.ps-menus-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 12px;
+}
+.ps-menu-item {
+  border-radius: var(--radius); overflow: hidden;
+  position: relative; cursor: zoom-in;
+}
+.ps-menu-item img {
+  width: 100%; height: 100%; object-fit: cover; display: block;
+  aspect-ratio: 3/4;
+  transition: transform 0.6s var(--transition);
+}
+.ps-menu-item:hover img { transform: scale(1.04); }
+.ps-menu-item__caption {
+  position: absolute; inset: 0;
+  background: linear-gradient(to top, rgba(0,0,0,0.7) 0%, transparent 50%);
+  display: flex; align-items: flex-end; padding: 14px 16px;
+  opacity: 0; transition: opacity 0.3s;
+}
+.ps-menu-item:hover .ps-menu-item__caption { opacity: 1; }
+.ps-menu-item__caption span {
+  font-size: 10px; letter-spacing: 2px; text-transform: uppercase;
+  color: rgba(240,237,232,0.85);
+}
+
+/* Lightbox simples */
+.ps-menu-item { cursor: zoom-in; }
+#ps-lightbox {
+  display: none; position: fixed; inset: 0; z-index: 9000;
+  background: rgba(0,0,0,0.92);
+  align-items: center; justify-content: center;
+  padding: 24px;
+}
+#ps-lightbox.open { display: flex; }
+#ps-lightbox img {
+  max-width: min(90vw, 600px); max-height: 90vh;
+  border-radius: 12px; object-fit: contain;
+}
+#ps-lb-close {
+  position: absolute; top: 20px; right: 24px;
+  font-size: 28px; color: var(--cream); cursor: pointer;
+  background: none; border: none; line-height: 1;
+  opacity: 0.6; transition: opacity 0.2s;
+}
+#ps-lb-close:hover { opacity: 1; }
+
+/* ------ [03] VÍDEOS ------ */
+.ps-videos-grid {
+  display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+}
+.ps-video-card {
+  background: rgba(240,237,232,0.025); border: 1px solid rgba(240,237,232,0.07);
+  border-radius: var(--radius); overflow: hidden;
+  transition: border-color 0.3s, background 0.3s;
+}
+.ps-video-card:hover {
+  background: var(--ps-dim2); border-color: var(--ps-border);
+}
+.ps-video-card .yt-facade {
+  aspect-ratio: 16/9;
+}
+.ps-video-card__meta {
+  padding: 16px 20px;
+}
+.ps-video-card__num {
+  font-size: 10px; letter-spacing: 3px; color: var(--ps-warm);
+  margin-bottom: 6px; display: block;
+}
+.ps-video-card__title {
+  font-family: 'Agdasima', sans-serif; font-size: 20px;
+  color: var(--cream); letter-spacing: 1px; margin-bottom: 6px;
+}
+.ps-video-card__desc {
+  font-size: 13px; color: rgba(240,237,232,0.45); line-height: 1.6;
+}
+
+/* ------ CTA ------ */
+.ps-cta {
+  padding: clamp(64px,9vw,110px) clamp(24px,6vw,100px);
+  text-align: center; position: relative; z-index: 2;
+  border-top: 1px solid rgba(240,237,232,0.06);
+}
+.ps-cta__eyebrow {
+  font-size: 11px; letter-spacing: 3px; text-transform: uppercase;
+  color: var(--ps-warm); margin-bottom: 16px;
+}
+.ps-cta__title {
+  font-family: 'Agdasima', sans-serif;
+  font-size: clamp(44px,7vw,90px);
+  color: var(--cream); letter-spacing: 2px; line-height: 0.9;
+  margin-bottom: 12px;
+}
+.ps-cta__sub {
+  font-size: 14px; color: rgba(240,237,232,0.38);
+  margin-bottom: 36px; font-weight: 300;
+}
+.ps-cta__btns {
+  display: flex; justify-content: center; gap: 14px; flex-wrap: wrap;
+}
+.btn-passion {
+  background: var(--ps-warm); color: #fff;
+  box-shadow: 0 4px 32px rgba(212,103,12,0.22);
+}
+.btn-passion:hover {
+  background: #e07a18; transform: translateY(-2px);
+  box-shadow: 0 8px 48px rgba(212,103,12,0.36);
+}
+.btn-ghost {
+  background: transparent; border: 1px solid rgba(240,237,232,0.18);
+  color: rgba(240,237,232,0.55);
+}
+.btn-ghost:hover {
+  border-color: rgba(240,237,232,0.35); color: var(--cream);
+  transform: translateY(-2px);
+}
+</style>
+</head>
+<body>
+
+<div id="scroll-progress"></div>
+<div id="cursor"></div>
+<div id="cursor-ring"></div>
+<canvas id="bg-canvas"></canvas>
+<div class="noise"></div>
+
+<nav id="navbar">
+  <a href="index.html" class="nav-logo" data-hover>
+    <div class="nav-logo-mark"><img src="assets__img__logotipo__LOGO.svg" alt="Logótipo Garisign" width="32" height="32"></div>
+    <span class="nav-logo-text">Garisign</span>
+  </a>
+  <ul class="nav-links">
+    <li><a href="index.html" data-nav data-i18n="nav.home">Início</a></li>
+    <li><a href="trabalhos.html" data-nav class="active" data-i18n="nav.works">Trabalhos</a></li>
+    <li><a href="index.html#services" data-nav data-i18n="nav.services">Serviços</a></li>
+    <li><a href="sobre.html" data-nav data-i18n="nav.about">Sobre</a></li>
+    <li><a href="contacto.html" data-nav data-i18n="nav.contact">Contacto</a></li>
+  </ul>
+  <div class="nav-right">
+    <div class="lang-toggle">
+      <button type="button" class="lang-btn active" data-lang="pt" id="btn-pt">PT</button>
+      <button type="button" class="lang-btn" data-lang="en" id="btn-en">EN</button>
+    </div>
+    <button type="button" id="nav-toggle" class="nav-toggle" aria-label="Menu" onclick="toggleMenu()">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<div id="mobile-menu" class="mobile-menu" aria-hidden="true">
+  <ul>
+    <li><a href="index.html" onclick="toggleMenu()" data-i18n="nav.home">Início</a></li>
+    <li><a href="trabalhos.html" onclick="toggleMenu()" data-i18n="nav.works">Trabalhos</a></li>
+    <li><a href="index.html#services" onclick="toggleMenu()" data-i18n="nav.services">Serviços</a></li>
+    <li><a href="index.html#about" onclick="toggleMenu()" data-i18n="nav.about">Sobre</a></li>
+    <li><a href="contacto.html" onclick="toggleMenu()" data-i18n="nav.contact">Contacto</a></li>
+  </ul>
+</div>
+
+<main>
+
+  <!-- HERO -->
+  <section class="ps-hero">
+    <a href="trabalhos.html" class="ps-hero__back" data-i18n="passion.hero.back">← Trabalhos</a>
+    <div class="ps-hero__content reveal">
+      <div class="ps-hero__badge">Restaurante · Felgueiras · 2026</div>
+      <img src="projetos__Passion__passion.png" alt="Logótipo Passion Restaurante" class="ps-hero__logo" loading="eager">
+      <h1 class="ps-hero__title">PASSION</h1>
+      <p class="ps-hero__sub">Restaurante em Felgueiras, menus, vídeo e identidade visual</p>
+      <div class="ps-hero__chips">
+        <span class="ps-chip ps-chip--warm" data-i18n="passion.hero.chip1">Design de Menus</span>
+        <span class="ps-chip ps-chip--warm" data-i18n="passion.hero.chip2">Vídeos Promocionais</span>
+        <span class="ps-chip">7 Páginas de Menu</span>
+        <span class="ps-chip">3 Vídeos</span>
+        <span class="ps-chip" data-i18n="passion.hero.chip3">Social Media</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- [01] O PROJETO -->
+  <section class="ps-section reveal">
+    <span class="ps-num" data-i18n="passion.s01.num">[01] O Projeto</span>
+    <h2 class="ps-title" data-i18n-html="passion.s01.title">Dar Sabor<br>à Comunicação</h2>
+    <div class="ps-projeto-grid">
+      <div class="ps-projeto__text">
+        <p data-i18n="passion.s01.p1">O Passion é um restaurante em Felgueiras com uma identidade visual marcada e uma clientela fiel. O objetivo foi criar materiais que comunicassem com a mesma qualidade que a experiência dentro do espaço.</p>
+        <p data-i18n="passion.s01.p2">O trabalho incluiu o design completo dos menus: sete páginas com tipografia, fotografia e estrutura de conteúdo pensadas para serem funcionais e visualmente apelativas, e três vídeos promocionais para redes sociais.</p>
+        <p data-i18n="passion.s01.p3">Um dos vídeos foi criado a propósito da época da seleção portuguesa, associando o restaurante ao espírito futebolístico da comunidade local. Outro foca-se na apresentação dos pratos e na experiência gastronómica do espaço.</p>
+      </div>
+      <div class="ps-info-card">
+        <span class="ps-info-card__label" data-i18n="passion.s01.infolabel">Detalhes do Projeto</span>
+        <div class="ps-info-row">
+          <span class="ps-info-row__key" data-i18n="passion.s01.row1key">Cliente</span>
+          <span class="ps-info-row__val">Passion Restaurante</span>
+        </div>
+        <div class="ps-info-row">
+          <span class="ps-info-row__key" data-i18n="passion.s01.row2key">Tipo</span>
+          <span class="ps-info-row__val" data-i18n="passion.s01.row2val">Print · Vídeo · Social Media</span>
+        </div>
+        <div class="ps-info-row">
+          <span class="ps-info-row__key" data-i18n="passion.s01.row3key">Entregáveis</span>
+          <span class="ps-info-row__val" data-i18n="passion.s01.row3val">7 pág. menu · 3 vídeos</span>
+        </div>
+        <div class="ps-info-row">
+          <span class="ps-info-row__key" data-i18n="passion.s01.row4key">Ferramentas</span>
+          <span class="ps-info-row__val">Photoshop · Premiere Pro</span>
+        </div>
+        <div class="ps-info-row">
+          <span class="ps-info-row__key" data-i18n="passion.s01.row5key">Ano</span>
+          <span class="ps-info-row__val">2026</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- [02] MENUS -->
+  <section class="ps-section reveal">
+    <span class="ps-num" data-i18n="passion.s02.num">[02] Design de Menus</span>
+    <h2 class="ps-title" data-i18n-html="passion.s02.title">Sete Páginas,<br>Uma Identidade</h2>
+    <p class="ps-lead" data-i18n="passion.s02.lead">Cada página do menu foi desenhada com atenção à hierarquia de informação, tipografia e identidade da marca, para que seja fácil de ler e agradável de segurar.</p>
+    <div class="ps-menus-grid">
+      <div class="ps-menu-item" onclick="openLightbox('projetos__Passion__menus__Sem Título-1.jpg')">
+        <img src="projetos__Passion__menus__Sem Título-1.jpg" alt="Passion: Menu página 1, capa" loading="lazy">
+        <div class="ps-menu-item__caption"><span>Página 1: Capa</span></div>
+      </div>
+      <div class="ps-menu-item" onclick="openLightbox('projetos__Passion__menus__Sem Título-2.jpg')">
+        <img src="projetos__Passion__menus__Sem Título-2.jpg" alt="Passion: Menu página 2" loading="lazy">
+        <div class="ps-menu-item__caption"><span>Página 2</span></div>
+      </div>
+      <div class="ps-menu-item" onclick="openLightbox('projetos__Passion__menus__Sem Título-3.jpg')">
+        <img src="projetos__Passion__menus__Sem Título-3.jpg" alt="Passion: Menu página 3" loading="lazy">
+        <div class="ps-menu-item__caption"><span>Página 3</span></div>
+      </div>
+      <div class="ps-menu-item" onclick="openLightbox('projetos__Passion__menus__Sem Título-4.jpg')">
+        <img src="projetos__Passion__menus__Sem Título-4.jpg" alt="Passion: Menu página 4, pratos" loading="lazy">
+        <div class="ps-menu-item__caption"><span>Página 4: Pratos</span></div>
+      </div>
+      <div class="ps-menu-item" onclick="openLightbox('projetos__Passion__menus__Sem Título-5.jpg')">
+        <img src="projetos__Passion__menus__Sem Título-5.jpg" alt="Passion: Menu página 5" loading="lazy">
+        <div class="ps-menu-item__caption"><span>Página 5</span></div>
+      </div>
+      <div class="ps-menu-item" onclick="openLightbox('projetos__Passion__menus__Sem Título-6.jpg')">
+        <img src="projetos__Passion__menus__Sem Título-6.jpg" alt="Passion: Menu página 6, sobremesas" loading="lazy">
+        <div class="ps-menu-item__caption"><span>Página 6: Sobremesas</span></div>
+      </div>
+      <div class="ps-menu-item" onclick="openLightbox('projetos__Passion__menus__Sem Título-7.jpg')">
+        <img src="projetos__Passion__menus__Sem Título-7.jpg" alt="Passion: Menu página 7, contracapa" loading="lazy">
+        <div class="ps-menu-item__caption"><span>Página 7: Contracapa</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Lightbox -->
+  <div id="ps-lightbox" role="dialog" aria-modal="true" aria-label="Visualizar menu" onclick="closeLightbox(event)">
+    <button id="ps-lb-close" onclick="closeLightbox()" aria-label="Fechar">×</button>
+    <img id="ps-lb-img" src="" alt="Menu Passion em destaque">
+  </div>
+
+  <!-- [03] VÍDEOS -->
+  <section class="ps-section reveal">
+    <span class="ps-num" data-i18n="passion.s03.num">[03] Vídeos Promocionais</span>
+    <h2 class="ps-title" data-i18n-html="passion.s03.title">Três Vídeos,<br>Três Momentos</h2>
+    <p class="ps-lead" data-i18n="passion.s03.lead">Cada vídeo foi pensado para um contexto e objetivo específico: da apresentação do restaurante ao espírito da seleção portuguesa, passando pela experiência gastronómica dos pratos.</p>
+    <div class="ps-videos-grid">
+      <div class="ps-video-card">
+        <div class="yt-facade" data-yt-id="quqoLBCv5e0" data-yt-title="Vídeo promocional principal do Passion">
+          <img class="yt-facade__thumb" src="https://i.ytimg.com/vi/quqoLBCv5e0/hqdefault.jpg" alt="" loading="lazy">
+          <button type="button" class="yt-facade__play" aria-label="Reproduzir vídeo: Vídeo promocional principal do Passion">
+            <span class="yt-facade__play-btn"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg></span>
+          </button>
+        </div>
+        <div class="ps-video-card__meta">
+          <span class="ps-video-card__num">01</span>
+          <p class="ps-video-card__title" data-i18n="passion.s03.v1title">Anúncio Principal</p>
+          <p class="ps-video-card__desc" data-i18n="passion.s03.v1desc">O vídeo de apresentação do restaurante Passion: atmosfera, identidade e o que torna o espaço único. Criado para redes sociais.</p>
+        </div>
+      </div>
+      <div class="ps-video-card">
+        <div class="yt-facade" data-yt-id="JnYwXwwo6rU" data-yt-title="Vídeo especial seleção portuguesa: Passion">
+          <img class="yt-facade__thumb" src="https://i.ytimg.com/vi/JnYwXwwo6rU/hqdefault.jpg" alt="" loading="lazy">
+          <button type="button" class="yt-facade__play" aria-label="Reproduzir vídeo: Vídeo especial seleção portuguesa: Passion">
+            <span class="yt-facade__play-btn"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg></span>
+          </button>
+        </div>
+        <div class="ps-video-card__meta">
+          <span class="ps-video-card__num">02</span>
+          <p class="ps-video-card__title" data-i18n="passion.s03.v2title">Especial Seleção</p>
+          <p class="ps-video-card__desc" data-i18n="passion.s03.v2desc">Vídeo temático criado para a época dos jogos da seleção portuguesa, associando o Passion ao espírito futebolístico e à reunião de amigos.</p>
+        </div>
+      </div>
+      <div class="ps-video-card">
+        <div class="yt-facade" data-yt-id="EsiDFpyI7VU" data-yt-title="Vídeo de apresentação dos pratos: Passion">
+          <img class="yt-facade__thumb" src="https://i.ytimg.com/vi/EsiDFpyI7VU/hqdefault.jpg" alt="" loading="lazy">
+          <button type="button" class="yt-facade__play" aria-label="Reproduzir vídeo: Vídeo de apresentação dos pratos: Passion">
+            <span class="yt-facade__play-btn"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg></span>
+          </button>
+        </div>
+        <div class="ps-video-card__meta">
+          <span class="ps-video-card__num">03</span>
+          <p class="ps-video-card__title" data-i18n="passion.s03.v3title">Os Pratos</p>
+          <p class="ps-video-card__desc" data-i18n="passion.s03.v3desc">Apresentação visual da carta e dos pratos do restaurante, para redes sociais e promoção do menu junto dos clientes.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <div class="ps-cta reveal">
+    <p class="ps-cta__eyebrow" data-i18n="passion.cta.eyebrow">Próximo Projeto</p>
+    <h2 class="ps-cta__title" data-i18n-html="passion.cta.title">O Teu<br>Projeto</h2>
+    <p class="ps-cta__sub" data-i18n="passion.cta.sub">Tens uma marca, um restaurante, um negócio? Vamos criar algo juntos.</p>
+    <div class="ps-cta__btns">
+      <a href="contacto.html" class="btn-primary btn-passion" data-hover data-i18n="passion.cta.contact">Fala Comigo →</a>
+      <a href="trabalhos.html" class="btn-primary btn-ghost" data-hover data-i18n="passion.cta.back">← Outros Trabalhos</a>
+    </div>
+  </div>
+
+</main>
+
+<!-- SITE FOOTER -->
+<section class="site-footer">
+  <div class="site-footer__decal">GA</div>
+  <div class="site-footer__top reveal">
+    <div class="site-footer__intro">
+      <p class="section-label"><span data-i18n="siteFooter.label">[04] CONTACTO</span></p>
+      <h2 class="site-footer__title" data-i18n-html="siteFooter.title">Vamos criar<br>algo que<br>fica na <span class="site-footer-title-italic">memória.</span></h2>
+    </div>
+    <div class="site-footer__contact">
+      <a href="mailto:garisign2025@gmail.com" class="site-footer__email">garisign2025@gmail.com</a>
+      <p class="site-footer__text" data-i18n="siteFooter.location">Felgueiras, Portugal, disponível remotamente</p>
+      <p class="site-footer__text site-footer__text--muted" data-i18n="siteFooter.areas">Design Gráfico · Motion Design · Edição de Vídeo</p>
+      <a href="contacto.html" class="btn-primary" data-hover data-i18n="siteFooter.button">Ver Contacto →</a>
+    </div>
+  </div>
+  <hr class="site-footer__separator">
+  <div class="site-footer__bottom">
+    <a href="index.html" class="site-footer__logo">GARISIGN</a>
+    <p class="site-footer__copy" data-i18n="footer.copy">© 2025 Garisign Designer. Todos os direitos reservados.</p>
+    <div class="site-footer__links">
+      <a href="https://instagram.com/garisign.designer" target="_blank" rel="noopener noreferrer">INSTAGRAM</a>
+      <a href="https://tiktok.com/@garisign_designer" target="_blank" rel="noopener noreferrer">TIKTOK</a>
+      <a href="mailto:garisign2025@gmail.com">EMAIL</a>
+    </div>
+  </div>
+</section>
+
+<script src="js__translations.js" defer></script>
+<script src="js__script.js" defer></script>
+<script>
+function openLightbox(src) {
+  const lb = document.getElementById('ps-lightbox');
+  const img = document.getElementById('ps-lb-img');
+  img.src = src;
+  lb.classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
+function closeLightbox(e) {
+  if (!e || e.target === document.getElementById('ps-lightbox') || e.target.id === 'ps-lb-close') {
+    document.getElementById('ps-lightbox').classList.remove('open');
+    document.body.style.overflow = '';
+  }
+}
+document.addEventListener('keydown', e => { if (e.key === 'Escape') closeLightbox({target: document.getElementById('ps-lightbox')}); });
+</script>
+</body>
+</html>
+
+

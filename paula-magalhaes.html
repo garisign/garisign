@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Case study: Paula Magalhães: vídeo promocional para redes sociais por Garisign Designer.">
+<meta name="author" content="Gabriel, Garisign Designer">
+<link rel="icon" type="image/svg+xml" href="assets__img__logotipo__LOGO.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload" href="fonts__Agdasima-Regular.ttf" as="font" type="font/ttf" crossorigin>
+<link rel="preload" href="fonts__Comfortaa-Light.ttf" as="font" type="font/ttf" crossorigin>
+<link rel="preload" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital@1&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital@1&display=swap"></noscript>
+<link rel="stylesheet" href="css__styles.css">
+<title>Paula Magalhães: Garisign Designer</title>
+<style>
+:root {
+  --pm-green: #5b9e72;
+  --pm-green2: #73bc8d;
+  --pm-dim: rgba(91,158,114,0.12);
+  --pm-dim2: rgba(91,158,114,0.06);
+  --pm-border: rgba(91,158,114,0.28);
+}
+
+/* ------ HERO ------ */
+.pm-hero {
+  min-height: 100svh;
+  display: flex; flex-direction: column; justify-content: flex-end;
+  padding: clamp(80px,10vw,140px) clamp(24px,6vw,100px) clamp(60px,8vw,100px);
+  position: relative; overflow: hidden; z-index: 2;
+}
+.pm-hero::before {
+  content: '';
+  position: absolute; inset: 0; z-index: 0;
+  background: radial-gradient(ellipse 65% 55% at 75% 25%, rgba(91,158,114,0.07) 0%, transparent 65%);
+  pointer-events: none;
+}
+.pm-hero__back {
+  position: absolute; top: clamp(80px,10vw,116px); left: clamp(24px,6vw,100px);
+  font-size: 11px; letter-spacing: 2.5px; text-transform: uppercase;
+  color: rgba(240,237,232,0.35); text-decoration: none;
+  display: flex; align-items: center; gap: 8px;
+  transition: color 0.3s; z-index: 2;
+}
+.pm-hero__back:hover { color: var(--pm-green); }
+.pm-hero__content { position: relative; z-index: 2; }
+.pm-hero__badge {
+  display: inline-flex; align-items: center; gap: 8px;
+  padding: 5px 14px; border-radius: 40px;
+  background: var(--pm-dim); border: 1px solid var(--pm-border);
+  font-size: 11px; letter-spacing: 2px; text-transform: uppercase;
+  color: var(--pm-green); margin-bottom: 24px;
+}
+.pm-hero__badge::before {
+  content: ''; width: 6px; height: 6px; border-radius: 50%;
+  background: var(--pm-green); flex-shrink: 0;
+  animation: pulse-dot 2.4s ease-in-out infinite;
+}
+.pm-hero__title {
+  font-family: 'Agdasima', sans-serif;
+  font-size: clamp(52px,9vw,140px);
+  line-height: 0.85; letter-spacing: 3px;
+  color: var(--cream); margin-bottom: 10px;
+}
+.pm-hero__name-italic {
+  font-family: 'Playfair Display', serif; font-style: italic;
+  font-size: clamp(28px,5vw,72px);
+  color: var(--pm-green); letter-spacing: 1px; display: block;
+  margin-bottom: 18px; line-height: 1;
+}
+.pm-hero__sub {
+  font-size: clamp(12px,1.3vw,15px); letter-spacing: 1px;
+  color: rgba(240,237,232,0.4); margin-bottom: 32px;
+}
+.pm-hero__chips { display: flex; flex-wrap: wrap; gap: 10px; }
+.pm-chip {
+  padding: 6px 14px; border-radius: 40px;
+  font-size: 10px; letter-spacing: 1.5px; text-transform: uppercase;
+  background: rgba(240,237,232,0.04); border: 1px solid rgba(240,237,232,0.1);
+  color: rgba(240,237,232,0.45);
+}
+.pm-chip--green {
+  background: var(--pm-dim); border-color: var(--pm-border);
+  color: var(--pm-green);
+}
+
+/* ------ SECÇÕES ------ */
+.pm-section {
+  padding: clamp(60px,8vw,100px) clamp(24px,6vw,100px);
+  position: relative; z-index: 2;
+  border-top: 1px solid rgba(240,237,232,0.06);
+}
+.pm-num {
+  font-size: 11px; font-weight: 600; letter-spacing: 3px; text-transform: uppercase;
+  color: var(--pm-green); margin-bottom: 14px; display: block;
+}
+.pm-title {
+  font-family: 'Agdasima', sans-serif;
+  font-size: clamp(38px,5vw,68px); color: var(--cream);
+  letter-spacing: 2px; line-height: 0.95; margin-bottom: 36px;
+}
+.pm-lead {
+  font-size: clamp(15px,1.4vw,17px); line-height: 1.8;
+  color: rgba(240,237,232,0.58); max-width: 680px; margin-bottom: 40px;
+}
+
+/* ------ [01] PROJETO ------ */
+.pm-projeto-grid {
+  display: grid; grid-template-columns: 1fr 1fr;
+  gap: clamp(32px,5vw,64px); align-items: start;
+}
+.pm-projeto__text {
+  font-size: clamp(15px,1.4vw,17px); line-height: 1.8;
+  color: rgba(240,237,232,0.65);
+}
+.pm-projeto__text p + p { margin-top: 16px; }
+.pm-info-card {
+  background: var(--pm-dim2); border: 1px solid var(--pm-border);
+  border-radius: var(--radius); padding: clamp(20px,3vw,32px);
+}
+.pm-info-card__label {
+  font-size: 10px; letter-spacing: 3px; text-transform: uppercase;
+  color: var(--pm-green); margin-bottom: 18px; display: block;
+}
+.pm-info-row {
+  display: flex; justify-content: space-between; align-items: baseline;
+  padding: 11px 0; border-bottom: 1px solid rgba(91,158,114,0.1);
+}
+.pm-info-row:last-child { border-bottom: none; }
+.pm-info-row__key { font-size: 12px; color: rgba(240,237,232,0.38); }
+.pm-info-row__val { font-size: 13px; color: var(--cream); font-weight: 500; text-align: right; }
+@media (max-width: 768px) {
+  .pm-projeto-grid { grid-template-columns: 1fr; }
+}
+
+/* ------ [02] IDENTIDADE VISUAL ------ */
+.pm-identity-grid {
+  display: grid; grid-template-columns: repeat(auto-fit, minmax(260px,1fr));
+  gap: 16px;
+}
+.pm-logo-card {
+  background: rgba(240,237,232,0.025); border: 1px solid rgba(240,237,232,0.07);
+  border-radius: var(--radius); padding: clamp(24px,4vw,48px);
+  display: flex; flex-direction: column; align-items: center; gap: 16px;
+  transition: border-color 0.3s, background 0.3s;
+}
+.pm-logo-card:hover {
+  background: var(--pm-dim2); border-color: var(--pm-border);
+}
+.pm-logo-card img {
+  max-width: 200px; max-height: 140px;
+  object-fit: contain; display: block;
+}
+.pm-logo-card__label {
+  font-size: 11px; letter-spacing: 2px; text-transform: uppercase;
+  color: rgba(240,237,232,0.4); text-align: center;
+}
+.pm-logo-card__desc {
+  font-size: 13px; color: rgba(240,237,232,0.52); line-height: 1.65;
+  text-align: center; max-width: 240px;
+}
+
+/* Cor e valores da paleta */
+.pm-palette {
+  display: flex; gap: 12px; flex-wrap: wrap; margin-top: 40px;
+}
+.pm-swatch {
+  display: flex; flex-direction: column; align-items: center; gap: 8px;
+}
+.pm-swatch__color {
+  width: 64px; height: 64px; border-radius: 14px;
+  border: 1px solid rgba(240,237,232,0.08);
+}
+.pm-swatch__label {
+  font-size: 10px; letter-spacing: 1.5px; text-transform: uppercase;
+  color: rgba(240,237,232,0.38); text-align: center;
+}
+
+/* ------ [03] VÍDEO ------ */
+.pm-video-wrap {
+  display: grid; grid-template-columns: auto 1fr;
+  gap: clamp(32px,5vw,64px); align-items: center;
+}
+.pm-video-player {
+  width: clamp(240px, 28vw, 320px);
+  border-radius: var(--radius); overflow: hidden;
+  border: 1px solid var(--pm-border);
+  box-shadow: 0 16px 64px rgba(91,158,114,0.12);
+}
+.pm-video-player .yt-facade {
+  aspect-ratio: 9/16;
+}
+.pm-video-meta__tag {
+  display: inline-flex; align-items: center; gap: 8px;
+  padding: 4px 12px; border-radius: 20px;
+  background: var(--pm-dim); border: 1px solid var(--pm-border);
+  font-size: 10px; letter-spacing: 2px; text-transform: uppercase;
+  color: var(--pm-green); margin-bottom: 20px;
+}
+.pm-video-meta__title {
+  font-family: 'Agdasima', sans-serif;
+  font-size: clamp(26px,3vw,44px); color: var(--cream);
+  letter-spacing: 2px; line-height: 1; margin-bottom: 18px;
+}
+.pm-video-meta__desc {
+  font-size: clamp(14px,1.4vw,16px); color: rgba(240,237,232,0.58);
+  line-height: 1.75; max-width: 480px;
+}
+@media (max-width: 768px) {
+  .pm-video-wrap { grid-template-columns: 1fr; }
+  .pm-video-player { width: 100%; max-width: 300px; margin: 0 auto; }
+}
+
+/* ------ CTA ------ */
+.pm-cta {
+  padding: clamp(64px,9vw,110px) clamp(24px,6vw,100px);
+  text-align: center; position: relative; z-index: 2;
+  border-top: 1px solid rgba(240,237,232,0.06);
+}
+.pm-cta__eyebrow {
+  font-size: 11px; letter-spacing: 3px; text-transform: uppercase;
+  color: var(--pm-green); margin-bottom: 16px;
+}
+.pm-cta__title {
+  font-family: 'Agdasima', sans-serif;
+  font-size: clamp(44px,7vw,90px);
+  color: var(--cream); letter-spacing: 2px; line-height: 0.9;
+  margin-bottom: 12px;
+}
+.pm-cta__sub {
+  font-size: 14px; color: rgba(240,237,232,0.38);
+  margin-bottom: 36px; font-weight: 300;
+}
+.pm-cta__btns {
+  display: flex; justify-content: center; gap: 14px; flex-wrap: wrap;
+}
+.btn-pm {
+  background: var(--pm-green); color: #fff;
+  box-shadow: 0 4px 32px rgba(91,158,114,0.22);
+}
+.btn-pm:hover {
+  background: var(--pm-green2); transform: translateY(-2px);
+  box-shadow: 0 8px 48px rgba(91,158,114,0.36);
+}
+.btn-ghost {
+  background: transparent; border: 1px solid rgba(240,237,232,0.18);
+  color: rgba(240,237,232,0.55);
+}
+.btn-ghost:hover {
+  border-color: rgba(240,237,232,0.35); color: var(--cream);
+  transform: translateY(-2px);
+}
+</style>
+</head>
+<body>
+
+<div id="scroll-progress"></div>
+<div id="cursor"></div>
+<div id="cursor-ring"></div>
+<canvas id="bg-canvas"></canvas>
+<div class="noise"></div>
+
+<nav id="navbar">
+  <a href="index.html" class="nav-logo" data-hover>
+    <div class="nav-logo-mark"><img src="assets__img__logotipo__LOGO.svg" alt="Logótipo Garisign" width="32" height="32"></div>
+    <span class="nav-logo-text">Garisign</span>
+  </a>
+  <ul class="nav-links">
+    <li><a href="index.html" data-nav data-i18n="nav.home">Início</a></li>
+    <li><a href="trabalhos.html" data-nav class="active" data-i18n="nav.works">Trabalhos</a></li>
+    <li><a href="index.html#services" data-nav data-i18n="nav.services">Serviços</a></li>
+    <li><a href="sobre.html" data-nav data-i18n="nav.about">Sobre</a></li>
+    <li><a href="contacto.html" data-nav data-i18n="nav.contact">Contacto</a></li>
+  </ul>
+  <div class="nav-right">
+    <div class="lang-toggle">
+      <button type="button" class="lang-btn active" data-lang="pt" id="btn-pt">PT</button>
+      <button type="button" class="lang-btn" data-lang="en" id="btn-en">EN</button>
+    </div>
+    <button type="button" id="nav-toggle" class="nav-toggle" aria-label="Menu" onclick="toggleMenu()">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<div id="mobile-menu" class="mobile-menu" aria-hidden="true">
+  <ul>
+    <li><a href="index.html" onclick="toggleMenu()" data-i18n="nav.home">Início</a></li>
+    <li><a href="trabalhos.html" onclick="toggleMenu()" data-i18n="nav.works">Trabalhos</a></li>
+    <li><a href="index.html#services" onclick="toggleMenu()" data-i18n="nav.services">Serviços</a></li>
+    <li><a href="index.html#about" onclick="toggleMenu()" data-i18n="nav.about">Sobre</a></li>
+    <li><a href="contacto.html" onclick="toggleMenu()" data-i18n="nav.contact">Contacto</a></li>
+  </ul>
+</div>
+
+<main>
+
+  <!-- HERO -->
+  <section class="pm-hero">
+    <a href="trabalhos.html" class="pm-hero__back" data-i18n="pm.hero.back">← Trabalhos</a>
+    <div class="pm-hero__content reveal">
+      <div class="pm-hero__badge">Hipnose · Coaching · Reiki · 2026</div>
+      <h1 class="pm-hero__title">PAULA</h1>
+      <span class="pm-hero__name-italic">Magalhães</span>
+      <p class="pm-hero__sub">Hipnose Clínica · Coaching · Reiki · IEMT · EFT, vídeo promocional para redes sociais</p>
+      <div class="pm-hero__chips">
+        <span class="pm-chip pm-chip--green" data-i18n="pm.hero.chip1">Vídeo Promocional</span>
+        <span class="pm-chip pm-chip--green" data-i18n="pm.hero.chip2">Social Media</span>
+        <span class="pm-chip" data-i18n="pm.hero.chip3">Hipnose & Coaching</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- [01] O PROJETO -->
+  <section class="pm-section reveal">
+    <span class="pm-num" data-i18n="pm.s01.num">[01] O Projeto</span>
+    <h2 class="pm-title" data-i18n-html="pm.s01.title">Um Vídeo que<br>Transmite Confiança</h2>
+    <div class="pm-projeto-grid">
+      <div class="pm-projeto__text">
+        <p data-i18n="pm.s01.p1">A Paula Magalhães é praticante de Hipnose Clínica Integrativa e Transpessoal, Coaching, Reiki, IEMT e EFT, um conjunto de técnicas terapêuticas focadas no bem-estar mental e emocional. Precisava de um vídeo que comunicasse profissionalismo, serenidade e confiança para as redes sociais.</p>
+        <p data-i18n="pm.s01.p2">Produzi um vídeo promocional pensado especificamente para Instagram e outras redes sociais, criado para apresentar os serviços da Paula de forma acessível, humana e profissional, captando o público que procura apoio e bem-estar.</p>
+      </div>
+      <div class="pm-info-card">
+        <span class="pm-info-card__label" data-i18n="pm.s01.infolabel">Detalhes do Projeto</span>
+        <div class="pm-info-row">
+          <span class="pm-info-row__key" data-i18n="pm.s01.row1key">Cliente</span>
+          <span class="pm-info-row__val">Paula Magalhães</span>
+        </div>
+        <div class="pm-info-row">
+          <span class="pm-info-row__key" data-i18n="pm.s01.row2key">Área</span>
+          <span class="pm-info-row__val" data-i18n="pm.s01.row2val">Bem-estar & Terapias</span>
+        </div>
+        <div class="pm-info-row">
+          <span class="pm-info-row__key" data-i18n="pm.s01.row3key">Tipo</span>
+          <span class="pm-info-row__val" data-i18n="pm.s01.row3val">Vídeo · Social Media</span>
+        </div>
+        <div class="pm-info-row">
+          <span class="pm-info-row__key" data-i18n="pm.s01.row4key">Entregáveis</span>
+          <span class="pm-info-row__val" data-i18n="pm.s01.row4val">Vídeo Promocional</span>
+        </div>
+        <div class="pm-info-row">
+          <span class="pm-info-row__key" data-i18n="pm.s01.row5key">Ferramentas</span>
+          <span class="pm-info-row__val">Premiere Pro</span>
+        </div>
+        <div class="pm-info-row">
+          <span class="pm-info-row__key" data-i18n="pm.s01.row6key">Ano</span>
+          <span class="pm-info-row__val">2026</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- [02] VÍDEO -->
+  <section class="pm-section reveal">
+    <span class="pm-num" data-i18n="pm.s03.num">[02] Vídeo Promocional</span>
+    <h2 class="pm-title" data-i18n-html="pm.s03.title">Para Redes<br>Sociais</h2>
+    <div class="pm-video-wrap">
+      <div class="pm-video-player">
+        <div class="yt-facade" data-yt-id="MOany_dvps4" data-yt-title="Vídeo promocional Paula Magalhães">
+          <img class="yt-facade__thumb" src="https://i.ytimg.com/vi/MOany_dvps4/hqdefault.jpg" alt="" loading="lazy">
+          <button type="button" class="yt-facade__play" aria-label="Reproduzir vídeo: Vídeo promocional Paula Magalhães">
+            <span class="yt-facade__play-btn"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg></span>
+          </button>
+        </div>
+      </div>
+      <div class="pm-video-meta">
+        <span class="pm-video-meta__tag">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
+          Social Media · Vídeo Promocional
+        </span>
+        <h3 class="pm-video-meta__title" data-i18n="pm.s03.videotitle">Paula Magalhães</h3>
+        <p class="pm-video-meta__desc" data-i18n="pm.s03.videodesc">Vídeo promocional criado para redes sociais, apresentando a Paula Magalhães, os seus serviços (Hipnose Clínica Integrativa e Transpessoal, Coaching, Reiki, IEMT e EFT) e a sua abordagem. Pensado para ser acessível, humano e profissional, captando o público que procura bem-estar e equilíbrio emocional.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <div class="pm-cta reveal">
+    <p class="pm-cta__eyebrow" data-i18n="pm.cta.eyebrow">Próximo Projeto</p>
+    <h2 class="pm-cta__title" data-i18n-html="pm.cta.title">A Tua<br>Marca</h2>
+    <p class="pm-cta__sub" data-i18n="pm.cta.sub">Tens um negócio, um serviço, um projeto? Vamos criar um vídeo que comunique com clareza e autenticidade.</p>
+    <div class="pm-cta__btns">
+      <a href="contacto.html" class="btn-primary btn-pm" data-hover data-i18n="pm.cta.contact">Fala Comigo →</a>
+      <a href="trabalhos.html" class="btn-primary btn-ghost" data-hover data-i18n="pm.cta.back">← Outros Trabalhos</a>
+    </div>
+  </div>
+
+</main>
+
+<!-- SITE FOOTER -->
+<section class="site-footer">
+  <div class="site-footer__decal">GA</div>
+  <div class="site-footer__top reveal">
+    <div class="site-footer__intro">
+      <p class="section-label"><span data-i18n="siteFooter.label">[04] CONTACTO</span></p>
+      <h2 class="site-footer__title" data-i18n-html="siteFooter.title">Vamos criar<br>algo que<br>fica na <span class="site-footer-title-italic">memória.</span></h2>
+    </div>
+    <div class="site-footer__contact">
+      <a href="mailto:garisign2025@gmail.com" class="site-footer__email">garisign2025@gmail.com</a>
+      <p class="site-footer__text" data-i18n="siteFooter.location">Felgueiras, Portugal, disponível remotamente</p>
+      <p class="site-footer__text site-footer__text--muted" data-i18n="siteFooter.areas">Design Gráfico · Motion Design · Edição de Vídeo</p>
+      <a href="contacto.html" class="btn-primary" data-hover data-i18n="siteFooter.button">Ver Contacto →</a>
+    </div>
+  </div>
+  <hr class="site-footer__separator">
+  <div class="site-footer__bottom">
+    <a href="index.html" class="site-footer__logo">GARISIGN</a>
+    <p class="site-footer__copy" data-i18n="footer.copy">© 2025 Garisign Designer. Todos os direitos reservados.</p>
+    <div class="site-footer__links">
+      <a href="https://instagram.com/garisign.designer" target="_blank" rel="noopener noreferrer">INSTAGRAM</a>
+      <a href="https://tiktok.com/@garisign_designer" target="_blank" rel="noopener noreferrer">TIKTOK</a>
+      <a href="mailto:garisign2025@gmail.com">EMAIL</a>
+    </div>
+  </div>
+</section>
+
+<script src="js__translations.js" defer></script>
+<script src="js__script.js" defer></script>
+</body>
+</html>
+
+
